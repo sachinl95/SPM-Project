@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, OnInit, OnDestroy} from '@angular/core';
 import { SettingsService } from '../services/settings.service';
 import { ROUTES } from './sidebar-routes.config';
+import { Subscription } from '../../../node_modules/rxjs/Subscription';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,6 +14,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
   public activeFontColor: string;
   public normalFontColor: string;
   public dividerBgColor: string;
+  subscriptions = new Subscription();
   constructor(public settingsService: SettingsService) {
     this.menuItems = ROUTES;
     this.activeFontColor = 'rgba(0,0,0,.6)';
@@ -22,7 +24,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit() {
     this.color = this.settingsService.getSidebarFilter();
-    this.settingsService.sidebarFilterUpdate.subscribe((filter: string) => {
+    this.subscriptions.add= this.settingsService.sidebarFilterUpdate.subscribe((filter: string) => {
       this.color = filter;
       if (filter === '#fff') {
         this.activeFontColor = 'rgba(0,0,0,.6)';
@@ -30,7 +32,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
         this.activeFontColor = 'rgba(255,255,255,.8)';
       }
     });
-    this.settingsService.sidebarColorUpdate.subscribe((color: string) => {
+    this.subscriptions.add=this.settingsService.sidebarColorUpdate.subscribe((color: string) => {
       if (color === '#fff') {
         this.normalFontColor = 'rgba(0,0,0,.6)';
         this.dividerBgColor = 'rgba(0,0,0,.1)';
@@ -41,8 +43,9 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
   ngOnDestroy() {
-    this.settingsService.sidebarFilterUpdate.unsubscribe();
-    this.settingsService.sidebarColorUpdate.unsubscribe();
+    this.subscriptions.unsubscribe();
+    // this.settingsService.sidebarFilterUpdate.unsubscribe();
+    // this.settingsService.sidebarColorUpdate.unsubscribe();
   }
 
   ngAfterViewInit() {
