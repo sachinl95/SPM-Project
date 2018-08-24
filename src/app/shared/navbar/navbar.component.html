@@ -5,12 +5,10 @@
   </div>
   <div class="right-part">
     <div class="right-part" id="nav-right">
-      <mat-input-container color="#ff0000">
-        <input matInput type="search" placeholder="Search">
-      </mat-input-container>
-      <button mat-mini-fab class="search-btn"><i class="material-icons" style="font-size:18px;">search</i></button>
-      <button mat-icon-button><i class="material-icons icon-btn">dashboard</i></button>
-      <app-msgiconbtn icon="notifications" number="5" [matMenuTriggerFor]="menu"></app-msgiconbtn>
+      <button mat-button routerLink="/">Logout</button>
+      <!-- <button mat-mini-fab class="search-btn"><i class="material-icons" style="font-size:18px;">search</i></button>
+      <button mat-icon-button><i class="material-icons icon-btn">dashboard</i></button> -->
+      <!-- <app-msgiconbtn icon="notifications" number="5" [matMenuTriggerFor]="menu"></app-msgiconbtn>
       <button mat-icon-button><i class="material-icons icon-btn">person</i></button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>Mike John responded to your email</button>
@@ -18,7 +16,7 @@
         <button mat-menu-item>You're now friend with Andrew</button>
         <button mat-menu-item>Another Notification</button>
         <button mat-menu-item>Another One</button>
-      </mat-menu>
+      </mat-menu> -->
     </div>
     <div id="menu">
       <button mat-icon-button (click)="menuClick()"><i class="material-icons">menu</i></button>
