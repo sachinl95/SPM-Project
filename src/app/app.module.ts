@@ -26,9 +26,11 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { SettingsComponent } from './dashboard/settings/settings.component';
 import { PriceTableComponent } from './dashboard/component/pricetable/pricetable.component';
 import { PanelsComponent } from './dashboard/component/panels/panels.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
+import {RegisterService} from './page/register/register.service'
 
 @NgModule({
   declarations: [
@@ -63,9 +65,11 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
     MatRadioModule,
     MatInputModule,
     MatMenuModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    HttpClientModule
   ],
-  providers: [SettingsService],
+  providers: [SettingsService,
+    RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
