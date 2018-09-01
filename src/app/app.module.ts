@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule } from '@angular/material';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatSelectModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -30,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
-import {RegisterService} from './page/register/register.service'
+import {RegisterService} from './page/register/register.service';
+import { StudentComponent } from './dashboard/student/student.component';
+import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component'
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import {RegisterService} from './page/register/register.service'
     SettingsComponent,
     PriceTableComponent,
     PanelsComponent,
-    WizardComponent
+    WizardComponent,
+    StudentComponent,
+    StudentDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +71,8 @@ import {RegisterService} from './page/register/register.service'
     MatMenuModule,
     MatCheckboxModule,
     HttpClientModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSelectModule
   ],
   providers: [SettingsService,
     RegisterService],

@@ -24,6 +24,16 @@
                     <input type="text" matInput placeholder="Name" name="name" [(ngModel)]="student.name" #name="ngModel" id="name">
                   </mat-input-container>
                 </div>
+                <div class="row">
+                  <mat-input-container color="accent">
+                    <mat-select placeholder="Company"></mat-select>
+                  </mat-input-container>
+                </div>
+                <div class="row">
+                  <mat-input-container color="accent">
+                    <mat-select placeholder="Supervisor"></mat-select>
+                  </mat-input-container>
+                </div>
                 <form #CreateStudentForm="ngForm" novalidate>
                   <div class="row" style="display: flex; justify-content: center">
                     <button mat-raised-button class="btn btn-primary btn-round" type="submit" (click)="onSubmit(CreateStudentForm)">Register</button>

@@ -15,6 +15,7 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import { RootComponent } from './dashboard/root/root.component';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
+import { StudentComponent } from './dashboard/student/student.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
     {path: 'settings', component: SettingsComponent},
     {path: 'components/price-table', component: PriceTableComponent},
     {path: 'components/panels', component: PanelsComponent},
-    {path: 'components/wizard', component: WizardComponent}
+    {path: 'components/wizard', component: WizardComponent},
+    {path: 'student', component: StudentComponent}
   ]}
 ];
 
