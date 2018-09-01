@@ -2,6 +2,7 @@
   "name": "angular2-material-dashboard-pro",
   "version": "1.0.0",
   "license": "MIT",
+  "author" : "Sahiru, Sameer, Sachin, Sachith, Sajith",
   "description": "Software Project Management - Internship Workflow Application - Front End - Angular",
   "scripts": {
     "ng": "ng",
