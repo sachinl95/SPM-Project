@@ -12,31 +12,23 @@
             <div class="col-md-5">
               <div class="form-part">
                 <div class="row">
+                  <i class="material-icons">credit_card</i>
+                  <mat-input-container color="accent">
+                    <input type="text" matInput placeholder="studentId" name="studentId" [(ngModel)]="student.studentId" #studentId="ngModel"
+                      id="studentId">
+                  </mat-input-container>
+                </div>
+                <div class="row">
                   <i class="material-icons">face</i>
                   <mat-input-container color="accent">
-                    <input type="text" matInput placeholder="Name" name="name" [(ngModel)]="student.name" #name="ngModel" id="name"  >
+                    <input type="text" matInput placeholder="Name" name="name" [(ngModel)]="student.name" #name="ngModel" id="name">
                   </mat-input-container>
                 </div>
-                <!-- <div class="row">
-                  <i class="material-icons">email</i>
-                  <mat-input-container color="accent">
-                    <input type="text" matInput placeholder="Email">
-                  </mat-input-container>
-                </div>
-                <div class="row">
-                  <i class="material-icons">lock_outline</i>
-                  <mat-input-container color="accent">
-                    <input type="text" matInput placeholder="Password">
-                  </mat-input-container> -->
-                <!-- </div>
-                <div class="row">
-                  <mat-checkbox style="margin-left: 2px"><p style="margin-left: 8px">I agree to the <span style="color: #9c27b0; cursor: pointer; font-weight: 400;">terms and conditions</span>.</p></mat-checkbox>
-                </div> -->
                 <form #CreateStudentForm="ngForm" novalidate>
-                <div class="row" style="display: flex; justify-content: center">
-                  <button mat-raised-button class="btn btn-primary btn-round" type="submit" (click)="onSubmit(CreateStudentForm)">Register</button>
-                </div>
-              </form>
+                  <div class="row" style="display: flex; justify-content: center">
+                    <button mat-raised-button class="btn btn-primary btn-round" type="submit" (click)="onSubmit(CreateStudentForm)">Register</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
