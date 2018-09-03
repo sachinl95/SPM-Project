@@ -32,7 +32,6 @@ import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import {RegisterService} from './page/register/register.service';
 import { StudentComponent } from './dashboard/student/student.component';
-import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 import { CompanyComponent } from './dashboard/company/company.component';
 import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
@@ -61,7 +60,6 @@ import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.compon
     PanelsComponent,
     WizardComponent,
     StudentComponent,
-    StudentDashboardComponent,
     CompanyComponent,
     FormI1Component,
     FormI3Component,
