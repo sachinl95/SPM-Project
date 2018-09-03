@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatSelectModule } from '@angular/material';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatSelectModule,MatFormFieldModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -32,7 +32,11 @@ import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import {RegisterService} from './page/register/register.service';
 import { StudentComponent } from './dashboard/student/student.component';
-import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component'
+import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
+import { CompanyComponent } from './dashboard/company/company.component';
+import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
+import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
+import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component'
 
 @NgModule({
   declarations: [
@@ -57,7 +61,11 @@ import { StudentDashboardComponent } from './student-dashboard/student-dashboard
     PanelsComponent,
     WizardComponent,
     StudentComponent,
-    StudentDashboardComponent
+    StudentDashboardComponent,
+    CompanyComponent,
+    FormI1Component,
+    FormI3Component,
+    FormI6Component
   ],
   imports: [
     BrowserModule,
@@ -72,7 +80,8 @@ import { StudentDashboardComponent } from './student-dashboard/student-dashboard
     MatCheckboxModule,
     HttpClientModule,
     MatSidenavModule,
-    MatSelectModule
+    MatSelectModule,
+    MatFormFieldModule
   ],
   providers: [SettingsService,
     RegisterService],
