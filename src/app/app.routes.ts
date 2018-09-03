@@ -17,6 +17,7 @@ import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 import { StudentComponent } from './dashboard/student/student.component';
 import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
+import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -33,6 +34,7 @@ const routes: Routes = [
     {path: 'components/wizard', component: WizardComponent},
     {path: 'student', component: StudentComponent},
     {path: 'forms/formI1', component: FormI1Component}
+    {path: 'forms/formI3', component: FormI3Component}
     
   ]}
 ];
