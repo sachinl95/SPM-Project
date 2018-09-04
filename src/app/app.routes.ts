@@ -33,7 +33,7 @@ const routes: Routes = [
     {path: 'components/panels', component: PanelsComponent},
     {path: 'components/wizard', component: WizardComponent},
     {path: 'student', component: StudentComponent},
-    {path: 'forms/formI1', component: FormI1Component}
+    {path: 'forms/formI1', component: FormI1Component},
     {path: 'forms/formI3', component: FormI3Component}
     
   ]}

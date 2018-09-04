@@ -1,9 +1,9 @@
 <app-navbar title="Form I-3"></app-navbar>
 <div class="card">
-  <h2 style="text-align: left;">INTERNS DAILY DIARY</h2>
+  <h2 style="text-align: left;"><strong>INTERNS DAILY DIARY</strong></h2>
   <div class="example-container">
     <form autocomplete="off" #CreateUserForm="ngForm" novalidate>
-        <h5 style="text-align: left;">Intern's Information</h5>
+        <h5 style="text-align: left;"><strong>Intern's Information</strong></h5>
       <div class="row">
         <mat-form-field>
           <input matInput placeholder="Intern's Name" class="fullLength">
@@ -31,7 +31,7 @@
         </mat-form-field>
       </div>
       <br/>
-      <h5 style="text-align: left;">Internship Information</h5>
+      <h5 style="text-align: left;"><strong>Internship Information</strong></h5>
       <div class="row">
           <mat-form-field>
             <input type="tel" matInput placeholder="Internship Title" class="fullLength">
@@ -41,7 +41,24 @@
             <mat-form-field>
               <input type="tel" matInput placeholder="Specilisation" class="fullLength">
             </mat-form-field>
-          </div> 
+          </div>
+          
+
+          <div class="form-group">
+            <label for="file"><strong>Choose The Internal Traninig Information</strong></label>
+            <input type="file"
+                   id="file"
+                   (change)="handleFileInput($event.target.files)">
+        </div>
+
+        <div class="button-row" style="position: center;"> 
+          <button mat-flat-button color="warn">Reset</button> 
+          <button mat-flat-button color="accent">Cancel</button>
+          <button mat-flat-button color="primary">Submit to Supervisor</button>
+         
+        </div>
+
+        
     </form>
   </div>
 </div>
