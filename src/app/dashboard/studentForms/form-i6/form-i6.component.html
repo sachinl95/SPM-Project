@@ -1,6 +1,17 @@
 <div class="card">
   <h2 id="heading">Internship Report</h2>
   <div>
-    
+    <form autocomplete="off" novalidate>
+      <div class="row">
+        <mat-form-field>
+          <input matInput placeholder="Student ID No.">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <button (click)="FileUpload()">Select File</button>
+        <span style="padding-right: 100px">file_name.doc</span>
+        <button (click)="upload()">Upload</button>
+      </div>
+    </form>
   </div>
 </div>

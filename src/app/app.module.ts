@@ -27,6 +27,7 @@ import { SettingsComponent } from './dashboard/settings/settings.component';
 import { PriceTableComponent } from './dashboard/component/pricetable/pricetable.component';
 import { PanelsComponent } from './dashboard/component/panels/panels.component';
 import { HttpClientModule } from '@angular/common/http'; 
+import { FileSelectDirective } from 'ng2-file-upload';
 
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
@@ -63,7 +64,8 @@ import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.compon
     CompanyComponent,
     FormI1Component,
     FormI3Component,
-    FormI6Component
+    FormI6Component,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,
