@@ -5,7 +5,7 @@ import "rxjs/add/operator/do";
 import "rxjs/add/operator/map";
 
 
-const URL = 'http://localhost:3000/student/submit-form-i6/IT16005372'
+const URL = 'http://localhost:3000/student/submit-form-i6/'
 
 @Component({
   selector: 'app-form-i6',
@@ -14,20 +14,18 @@ const URL = 'http://localhost:3000/student/submit-form-i6/IT16005372'
 })
 export class FormI6Component implements OnInit {
 
-  public uploader: FileUploader = new FileUploader({ url: URL, itemAlias: 'form-i6' })
+  studentId = ''
+
+  public uploader: FileUploader = new FileUploader({ url: URL + this.studentId, itemAlias: 'form_i6' })
+
   constructor(private http: Http, private el: ElementRef) { }
 
   ngOnInit() {
-    this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
-    this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
-      console.log("ImageUpload:uploaded:", item, status, response);
-      alert(response);
-    };
+
   }
 
   upload() {
     let inputEl: HTMLInputElement = this.el.nativeElement.querySelector('#form_i6');
-    console.log("iam+ " + inputEl);
     let fileCount: number = inputEl.files.length;
     let formData = new FormData();
     if (fileCount > 0) { // a file was selected
@@ -35,7 +33,7 @@ export class FormI6Component implements OnInit {
         formData.append('form_i6', inputEl.files.item(i));
       }
       this.http
-        .post(URL, formData).map((res: any) => res).subscribe(
+        .post(URL + this.studentId, formData).map((res: any) => res).subscribe(
           (success) => {
             alert(success._body);
           },

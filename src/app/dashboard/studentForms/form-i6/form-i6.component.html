@@ -1,20 +1,16 @@
 <div class="card">
   <h2 id="heading">Form I-6: Internship Report</h2>
   <div>
-    <form autocomplete="off" novalidate>
-      <div class="row">
-        <mat-form-field>
-          <input matInput placeholder="Student ID No.">
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <!-- <button (click)="FileUpload()">Select File</button> -->
-        <input type="file" name="form_i6" ng2FileSelect [uploader]="uploader" />
-        <span style="padding-right: 100px">file_name.doc</span>
-        <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
-          Upload with ng-2 file uploader
-        </button>
-      </div>
-    </form>
+    <div class="row">
+      <mat-form-field>
+        <input [(ngModel)]="studentId" matInput placeholder="Student ID No.">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <input id="form_i6" type="file" />
+      <button type="button" class="btn btn-success btn-s" (click)="upload()">
+        Upload with method 2
+      </button>
+    </div>
   </div>
 </div>
