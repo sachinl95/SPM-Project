@@ -1,3 +1,48 @@
-<p>
-  company works!
-</p>
+<div class="container">
+    <app-navbar title="Company Register"></app-navbar>
+    <div class="row" style="margin-top: 30px">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-content">
+            <h4 class="card-title">
+              <h4 class="category">Enter Company Details</h4>
+            </h4>
+            <form>
+
+              <!-- company name field -->
+              <div class="row">
+                <div class="col-md-6 offset-md-6">
+                  <mat-input-container color="accent">
+                    <input matInput type="text" placeholder="Company Name" [(ngModel)]="companyName" value="Ci" name="companyName">
+                  </mat-input-container>
+                </div>
+              </div>
+
+              <!-- supervisor name field -->
+              <div class="row">
+                  <div class="col-md-6 offset-md-6">
+                      <mat-input-container color="accent">
+                        <input matInput type="text" placeholder="Supervisor Name" [(ngModel)]="spervisorName" value="Ci" name="spervisorName">
+                      </mat-input-container>
+                  </div>
+              </div>
+
+              <!-- contact number field -->
+              <div class="row">
+                  <div class="col-md-6 offset-md-6">
+                      <mat-input-container color="accent">
+                        <input matInput type="text" placeholder="Company Contact Number" [(ngModel)]="companyNum" value="Ci" name="companyNum">
+                      </mat-input-container>
+                  </div>
+              </div>
+              
+              <div class="row action-btn">
+                <button md-raised-button type="submit" class="btn btn-rose">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
