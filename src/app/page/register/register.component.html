@@ -1,75 +1,76 @@
 <div class="container">
-  <div class="container">
     <div class="row">
-      <!-- <app-header></app-header> -->
-    </div>
-    <div class="row register-panel">
-      <div class="col-md-offset-4">
-        <div class="card">
-          <h2>Student Register</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-part">
-                <!-- Student ID number Eg: IT16054578 -->
-                <div class="row">
-                  <i class="material-icons">credit_card</i>
-                  <mat-input-container color="accent">
-                    <input type="text" matInput placeholder="studentId" name="studentId" [(ngModel)]="student.studentId" #studentId="ngModel"
-                      id="studentId">
-                  </mat-input-container>
-                </div>
+      <!--col-md-2-->
+        <div class=" col-md-2"></div>
+      <!-- form content start -->  
+        <div class=" col-md-8">
+            <div class="card">
+                <div class="card-content">
+                  <h4 class="card-title">
+                    <h4 class="category">Enter Your Details</h4>
+                  </h4>
+                  <form>
+      
+                    <div class="row">
+                      <div class="col-md-6 offset-md-6">
+                        <mat-input-container color="accent">
+                          <input matInput type="text" placeholder="Student ID" [(ngModel)]="studentId" value="Ci" name="studentId">
+                        </mat-input-container>
+                      </div>
+                    </div>
+      
+                    <div class="row">
+                        <div class="col-md-6 offset-md-6">
+                            <mat-input-container color="accent">
+                              <input matInput type="text" placeholder="First Name" [(ngModel)]="firstName" value="Ci" name="firstName">
+                            </mat-input-container>
+                        </div>
+                    </div>
+      
+                    <div class="row">
+                        <div class="col-md-6 offset-md-6">
+                            <mat-input-container color="accent">
+                              <input matInput type="text" placeholder="Last Name" [(ngModel)]="lastName" value="Ci" name="lastName">
+                            </mat-input-container>
+                        </div>
+                    </div>
+                    
+                   <div class="row">
+                        <div class="col-md-6">
+                            <mat-input-container color="accent">
+                                <mat-select placeholder="Company"></mat-select>
+                            </mat-input-container>
+                        </div>
 
-                <!-- Student first name -->
-                <div class="row">
-                  <i class="material-icons">face</i>
-                  <mat-input-container color="accent">
-                    <input type="text" matInput placeholder="First Name" name="name" [(ngModel)]="student.name" #name="ngModel" id="name">
-                  </mat-input-container>
-                </div>
+                        <div class="col-md-6">
+                            <mat-input-container color="accent">
+                                <mat-select placeholder="Supervisor"></mat-select>
+                            </mat-input-container>
+                        </div>
+                   </div>
 
-                <!-- Student last name -->
-                <div class="row">
-                  <i class="material-icons">face</i>
-                  <mat-input-container color="accent">
-                    <input type="text" matInput placeholder="Last Name" name="name" [(ngModel)]="student.name" #name="ngModel" id="name">
-                  </mat-input-container>
-                </div>
-
-                <!-- Company name, Company names are loaded from data base -->
-                <div class="row">
-                    <i class="material-icons">account_balance</i>
-                  <mat-input-container color="accent">
-                    <mat-select placeholder="Company"></mat-select>
-                  </mat-input-container>
-                </div>
-
-                <!-- Company supervisor name, Names are loaded from database -->
-                <div class="row">
-                    <i class="material-icons">perm_identity</i>
-                  <mat-input-container color="accent">
-                    <mat-select placeholder="Supervisor"></mat-select>
-                  </mat-input-container>
-                </div>
-
-                <!-- Student academic year -->
-                <div class="row">
-                    <i class="material-icons">calendar_today</i>
-                    <mat-input-container color="accent">
-                      <input type="text" matInput placeholder="Accademic Year" name="name" [(ngModel)]="student.name" #name="ngModel" id="name">
-                    </mat-input-container>
+                   <div class="row">
+                      <div class="col-md-6">
+                          <mat-input-container color="accent">
+                              <mat-select placeholder="Academic Year"></mat-select>
+                          </mat-input-container>
+                      </div>
                   </div>
 
-                <form #CreateStudentForm="ngForm" novalidate>
-                  <div class="row" style="display: flex; justify-content: center">
-                    <button mat-raised-button class="btn btn-primary btn-round" type="submit" (click)="onSubmit(CreateStudentForm)">Register</button>
-                  </div>
-                </form>
+                    <div class="row action-btn">
+                      <!-- Save button -->
+                      <button md-raised-button type="submit" class="btn btn-rose">Save</button>
 
+                      <!-- Redirect to home (Main page) -->
+                      <button md-raised-button type="submit" class="btn btn-rose" routerLink="/">Login</button>
+                    </div>
+                  </form>
+                </div>
               </div>
-            </div>
-          </div>
         </div>
-      </div>
+        <!-- form content end -->
+
+        <!-- col-md-2 -->
+        <div class=" col-md-2"></div>
     </div>
-  </div>
 </div>
