@@ -1,87 +1,86 @@
-.container{
-  height: 100%;
-  position: relative;
-  z-index: 1;
+.profile{
+  position: absolute;
+  top: -40px;
 }
 
-.background {
-  background: url("../../../assets/img/register_bg.jpg") center center;
-  background-size: cover;
+.right-profile h6{
+  margin-top: 100px;
+  margin-bottom: 8px;
+  color: #999;
 }
 
-.register-panel{
-  margin-top: 25px;
+.right-profile h4{
+  margin-bottom: 5px;
+}
+
+.right-profile p{
+  color: #999;
+}
+
+.right-profile button {
+  margin-top: 15px;
 }
 
 .card{
-  padding: 20px 0 20px;
-  width: 50%;
-}
-
-.card h2{
-  padding-left: 10%;
-  text-align: left;
-}
-
-.feature{
-  display: flex;
-  /*width: 100%;*/
-  flex: 1;
-  margin-top: 50px;
-}
-
-.feature .icon{
-  width: 40px;
-}
-
-.feature .icon i{
-  font-size: 2.6em;
-}
-
-.feature .desc{
-  flex: 1;
-  margin-left: 10px;
-}
-
-.feature .desc p{
-  margin-top: 17px;
-}
-
-.feature .desc h4{
-  margin-top: 8px;
-}
-
-.form-part{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-left: 25px;
-}
-
-.form-part .row{
-  width: 100%;
-  display: flex;
+  padding: 20px;
   position: relative;
-  margin-top: 17px;
-}
-
-.form-part .row .mat-input-container{
-  width: 100%;
-}
-
-.form-part .row i{
-  margin-right: 13px;
-  position: relative;
-  top: 8px;
-  color: #555;
-}
-
-.form-part .socials{
   margin-top: 40px;
-  margin-bottom: 25px;
 }
 
-.form-part .row button{
+.card-header {
+  position: absolute;
+  text-align: center;
+  background: linear-gradient(60deg, #ec407a, #d81b60);
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4);
+  /*margin: -20px 15px 0;*/
+  border-radius: 3px;
+  padding: 15px;
+  top: -23px;
+}
+
+.card-header i {
+  font-size: 24px;
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
+  color: #fff;
+}
+
+.card-content{
+  position: relative;
+}
+
+.card-title{
+  padding-left: 80px;
+}
+
+.mat-input-container{
+  width: 100%;
+}
+
+.category{
+  font-weight: 300;
+}
+
+form{
+  margin-top: 30px;
+}
+
+.row{
   margin-top: 15px;
+}
+
+.mat-input-container textarea{
+  height: 90px;
+}
+
+.textarea-label{
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.action-btn{
+  padding-left: 15px;
 }
