@@ -4,6 +4,14 @@
   z-index: 1;
 }
 
+/* Internship Workflow Application */
+.header {
+  margin: auto;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bolder
+}
+
 .card{
   position: relative;
   padding: 20px;

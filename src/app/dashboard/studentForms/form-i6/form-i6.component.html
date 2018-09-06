@@ -1,16 +1,13 @@
-<div class="card">
-  <h2 id="heading">Form I-6: Internship Report</h2>
-  <div>
-    <div class="row">
-      <mat-form-field>
-        <input [(ngModel)]="studentId" matInput placeholder="Student ID No.">
-      </mat-form-field>
-    </div>
-    <div class="row">
-      <input id="form_i6" type="file" />
-      <button type="button" class="btn btn-success btn-s" (click)="upload()">
-        Upload with method 2
-      </button>
-    </div>
-  </div>
-</div>
+<mat-card class="card">
+  <mat-card-title id="heading">Form I-6: Internship Report</mat-card-title>
+  <mat-input-container>
+    <input class="col-md-12" [(ngModel)]="studentId" matInput placeholder="Student ID No.">
+  </mat-input-container>
+  <mat-card-content>
+    The internship report should be submitted when your internship has been completed. The report will be sent
+    to the industry training manager for evaluation. Upload the document as either word (.doc, .docx) or pdf (.pdf)
+    document.
+  </mat-card-content>
+  <input class="" id="form_i6" type="file" style="padding-bottom: 10px;" />
+  <button class="btn btn-rose" type="button" (click)="upload()">Submit Report</button>
+</mat-card>

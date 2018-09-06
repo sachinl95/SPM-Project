@@ -29,6 +29,8 @@ import { PanelsComponent } from './dashboard/component/panels/panels.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { FileSelectDirective } from 'ng2-file-upload';
 
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import {RegisterService} from './page/register/register.service';
@@ -81,7 +83,9 @@ import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.compon
     HttpClientModule,
     MatSidenavModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatListModule,
+    MatCardModule
   ],
   providers: [SettingsService,
     RegisterService],

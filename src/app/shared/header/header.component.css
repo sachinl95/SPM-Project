@@ -8,6 +8,14 @@ header{
   color: #fff;
 }
 
+.header {
+  color: #ffffff;
+}
+
+.center {
+  text-align: center;
+}
+
 .right{
   display: flex;
 }
