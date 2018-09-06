@@ -27,12 +27,14 @@ import { SettingsComponent } from './dashboard/settings/settings.component';
 import { PriceTableComponent } from './dashboard/component/pricetable/pricetable.component';
 import { PanelsComponent } from './dashboard/component/panels/panels.component';
 import { HttpClientModule } from '@angular/common/http'; 
+import { FileSelectDirective } from 'ng2-file-upload';
 
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import {RegisterService} from './page/register/register.service';
 import { StudentComponent } from './dashboard/student/student.component';
-import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 import { CompanyComponent } from './dashboard/company/company.component';
 import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
@@ -61,11 +63,11 @@ import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.compon
     PanelsComponent,
     WizardComponent,
     StudentComponent,
-    StudentDashboardComponent,
     CompanyComponent,
     FormI1Component,
     FormI3Component,
-    FormI6Component
+    FormI6Component,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,
@@ -81,7 +83,9 @@ import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.compon
     HttpClientModule,
     MatSidenavModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatListModule,
+    MatCardModule
   ],
   providers: [SettingsService,
     RegisterService],

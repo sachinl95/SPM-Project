@@ -17,6 +17,7 @@ import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 import { StudentComponent } from './dashboard/student/student.component';
 import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
+import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -32,8 +33,8 @@ const routes: Routes = [
     {path: 'components/panels', component: PanelsComponent},
     {path: 'components/wizard', component: WizardComponent},
     {path: 'student', component: StudentComponent},
-    {path: 'forms/formI1', component: FormI1Component}
-    
+    {path: 'forms/formI1', component: FormI1Component},
+    {path: 'forms/form-i6', component: FormI6Component}
   ]}
 ];
 
