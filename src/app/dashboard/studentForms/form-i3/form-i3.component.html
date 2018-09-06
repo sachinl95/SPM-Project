@@ -42,23 +42,15 @@
               <input type="tel" matInput placeholder="Specilisation" class="fullLength">
             </mat-form-field>
           </div>
-          
+     
 
-          <div class="form-group">
-            <label for="file"><strong>Choose The Internal Traninig Information</strong></label>
-            <input type="file"
-                   id="file"
-                   (change)="handleFileInput($event.target.files)">
-        </div>
-
-        <div class="button-row" style="position: center;"> 
-          <button mat-flat-button color="warn">Reset</button> 
-          <button mat-flat-button color="accent">Cancel</button>
-          <button mat-flat-button color="primary">Submit to Supervisor</button>
+        <div class="button-row" > 
+          <button mat-flat-button color="warn" id="Reset">Reset</button> 
+          <button mat-flat-button color="accent" id="Cancel">Cancel</button>
+          <button mat-flat-button color="primary" id="Submit">Submit to Supervisor</button>
          
         </div>
 
-        
     </form>
   </div>
 </div>
