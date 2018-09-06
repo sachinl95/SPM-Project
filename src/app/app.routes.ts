@@ -1,6 +1,3 @@
-/**
- * Created by wangdi on 26/5/17.
- */
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './dashboard/home/home.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
@@ -18,6 +15,8 @@ import { RegisterComponent } from './page/register/register.component';
 import { StudentComponent } from './dashboard/student/student.component';
 import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
 import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component';
+import { VivaSchedulesComponent } from './dashboard/viva-schedules/viva-schedules.component'
+import { ScheduleComponent } from './dashboard/viva-schedules/schedule/schedule.component'
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -34,9 +33,10 @@ const routes: Routes = [
     {path: 'components/wizard', component: WizardComponent},
     {path: 'student', component: StudentComponent},
     {path: 'forms/formI1', component: FormI1Component},
-    {path: 'forms/form-i6', component: FormI6Component}
+    {path: 'forms/form-i6', component: FormI6Component},
+    {path: 'admin/viva-schedules', component: VivaSchedulesComponent},
+    {path: 'admin/viva-schedules/schedule', component: ScheduleComponent}
   ]}
 ];
 
 export const routing = RouterModule.forRoot(routes);
-
