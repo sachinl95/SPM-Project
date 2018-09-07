@@ -38,7 +38,9 @@ import { StudentComponent } from './dashboard/student/student.component';
 import { CompanyComponent } from './dashboard/company/company.component';
 import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
-import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component'
+import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component';
+import { VivaSchedulesComponent } from './dashboard/viva-schedules/viva-schedules.component';
+import { ScheduleComponent } from './dashboard/viva-schedules/schedule/schedule.component'
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.compon
     FormI1Component,
     FormI3Component,
     FormI6Component,
-    FileSelectDirective
+    FileSelectDirective,
+    VivaSchedulesComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,

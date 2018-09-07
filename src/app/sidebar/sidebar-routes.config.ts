@@ -12,4 +12,5 @@ export const ROUTES = [
     // { path: 'settings', title: 'Settings', icon: 'settings', children: null },
     { path: 'company', title: 'Company', icon: 'domain', children: null },
     { path: 'profile', title: 'profile', icon: 'domain', children: null },
+    { path: 'admin/viva-schedules', title: 'Viva Schedules', icon: 'account_box', children: null }
 ];
