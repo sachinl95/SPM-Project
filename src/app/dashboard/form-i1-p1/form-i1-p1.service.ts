@@ -3,10 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import {constants} from '../../_helpers/appConstants'
 
 @Injectable()
-export class RegisterService {
+export class FormI1P1Service {
+
   constructor(private http:HttpClient) { }
 
-  postStudent(student){
-    return this.http.post(constants.HOME_URL+"student",student);
+  postFormI1P1(FormI1p1){
+    return this.http.post(constants.HOME_URL+"form/formI1P1",FormI1p1);
   }
 }
