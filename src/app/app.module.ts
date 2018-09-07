@@ -33,11 +33,12 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import { RegisterService } from './page/register/register.service';
 import { StudentComponent } from './dashboard/student/student.component';
 import { CompanyComponent } from './dashboard/company/company.component';
-import { FormI1P1Component } from './dashboard/form-i1-p1/form-i1-p1.component';
+import { FormI1P1Component } from './dashboard/studentForms/form-i1-p1/form-i1-p1.component';
 // import { FormI1P1Component } from './dashboard/studentForms/form-i1-p1/form-i1-p1.component';
 // import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
 // import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component'
-import { FormI1P1Service } from './dashboard/form-i1-p1/form-i1-p1.service';
+import { FormI1P1Service } from './dashboard/studentForms/form-i1-p1/form-i1-p1.service';
+import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p2.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { FormI1P1Service } from './dashboard/form-i1-p1/form-i1-p1.service';
     StudentComponent,
     CompanyComponent,
     FormI1P1Component,
+    FormI1P2Component,
     // FormI1P1Component,
     // FormI3Component,
     // FormI6Component,

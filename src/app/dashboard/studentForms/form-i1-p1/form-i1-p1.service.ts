@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {constants} from '../../_helpers/appConstants'
+import {constants} from '../../../_helpers/appConstants'
 
 @Injectable()
 export class FormI1P1Service {

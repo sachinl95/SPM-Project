@@ -4,11 +4,6 @@
     z-index: 1;
   }
   
-  .background {
-    background: url("../../../assets/img/register_bg.jpg") center center;
-    background-size: cover;
-  }
-  
   .register-panel{
     margin-top: 25px;
   }
