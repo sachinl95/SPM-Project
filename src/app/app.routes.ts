@@ -16,7 +16,7 @@ import { RootComponent } from './dashboard/root/root.component';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 import { StudentComponent } from './dashboard/student/student.component';
-import { FormI1P1Component } from './dashboard/form-i1-p1/form-i1-p1.component';
+import { FormI1P1Component } from './dashboard/studentForms/form-i1-p1/form-i1-p1.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},

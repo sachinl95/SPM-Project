@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {FormI1P1Service} from './form-i1-p1.service'
-import {FormI1P1} from '../../_models/formI1P1'
-import { NgForm } from '../../../../node_modules/@angular/forms';
+import {FormI1P1Service} from './form-i1-p1.service';
+import {FormI1P1} from '../../../_models/formI1P1';
+import { NgForm } from '../../../../../node_modules/@angular/forms';
 @Component({
   selector: 'app-form-i1-p1',
   templateUrl: './form-i1-p1.component.html',
   styleUrls: ['./form-i1-p1.component.css']
 })
 export class FormI1P1Component implements OnInit {
-  studentId:string;
   formI1P1:FormI1P1;
   constructor(private formI1P1Service:FormI1P1Service) { }
   
