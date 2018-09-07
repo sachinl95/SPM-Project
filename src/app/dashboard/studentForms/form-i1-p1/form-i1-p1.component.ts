@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormI1P1Service} from './form-i1-p1.service';
 import {FormI1P1} from '../../../_models/formI1P1';
-import { NgForm } from '../../../../../node_modules/@angular/forms';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-form-i1-p1',
   templateUrl: './form-i1-p1.component.html',
