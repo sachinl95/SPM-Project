@@ -30,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
-import {RegisterService} from './page/register/register.service'
+import {RegisterService} from './page/register/register.service';
+import { SupervisorComponent } from './dashboard/supervisor/supervisor.component'
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {RegisterService} from './page/register/register.service'
     SettingsComponent,
     PriceTableComponent,
     PanelsComponent,
-    WizardComponent
+    WizardComponent,
+    SupervisorComponent
   ],
   imports: [
     BrowserModule,

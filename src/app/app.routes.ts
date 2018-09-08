@@ -11,6 +11,7 @@ import { SettingsComponent } from './dashboard/settings/settings.component';
 import { PriceTableComponent } from './dashboard/component/pricetable/pricetable.component';
 import { PanelsComponent} from './dashboard/component/panels/panels.component';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
+import { SupervisorComponent } from './dashboard/supervisor/supervisor.component';
 
 import { RootComponent } from './dashboard/root/root.component';
 import { LoginComponent } from './page/login/login.component';
@@ -28,7 +29,8 @@ const routes: Routes = [
     {path: 'settings', component: SettingsComponent},
     {path: 'components/price-table', component: PriceTableComponent},
     {path: 'components/panels', component: PanelsComponent},
-    {path: 'components/wizard', component: WizardComponent}
+    {path: 'components/wizard', component: WizardComponent},
+    {path: 'supervisor', component:SupervisorComponent}
   ]}
 ];
 
