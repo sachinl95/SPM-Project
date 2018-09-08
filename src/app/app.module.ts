@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatSelectModule,MatFormFieldModule } from '@angular/material';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatNativeDateModule,MatSelectModule,MatDatepickerModule,MatFormFieldModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -36,7 +36,9 @@ import { StudentDashboardComponent } from './student-dashboard/student-dashboard
 import { CompanyComponent } from './dashboard/company/company.component';
 import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
-import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component'
+import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component';
+import { InternInformationComponent } from './dashboard/studentForms/form-i3/intern-information/intern-information.component';
+import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.component'
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.compon
     CompanyComponent,
     FormI1Component,
     FormI3Component,
-    FormI6Component
+    FormI6Component,
+    InternInformationComponent,
+    DailyDiaryComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +85,9 @@ import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.compon
     HttpClientModule,
     MatSidenavModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [SettingsService,
     RegisterService],

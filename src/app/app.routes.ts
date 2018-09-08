@@ -18,6 +18,7 @@ import { RegisterComponent } from './page/register/register.component';
 import { StudentComponent } from './dashboard/student/student.component';
 import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
+import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -34,7 +35,12 @@ const routes: Routes = [
     {path: 'components/wizard', component: WizardComponent},
     {path: 'student', component: StudentComponent},
     {path: 'forms/formI1', component: FormI1Component},
-    {path: 'forms/formI3', component: FormI3Component}
+    {path: 'forms/formI3', component: FormI3Component},
+    {path: 'forms/formI3/internInfo', component: FormI3Component},
+    {path: 'forms/formI3/internshipInfo', component: FormI3Component},
+    {path: 'forms/formI3/dailyDiary', component: DailyDiaryComponent}
+    
+
     
   ]}
 ];
