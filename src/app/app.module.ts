@@ -36,7 +36,8 @@ import { StudentDashboardComponent } from './student-dashboard/student-dashboard
 import { CompanyComponent } from './dashboard/company/company.component';
 import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
-import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component'
+import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component';
+import { CompanyService } from './dashboard/company/company.service';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.compon
     MatFormFieldModule
   ],
   providers: [SettingsService,
-    RegisterService],
+    RegisterService,CompanyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

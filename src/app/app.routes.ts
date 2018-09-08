@@ -12,11 +12,12 @@ import { PriceTableComponent } from './dashboard/component/pricetable/pricetable
 import { PanelsComponent} from './dashboard/component/panels/panels.component';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 
-import { RootComponent } from './dashboard/root/root.component';
-import { LoginComponent } from './page/login/login.component';
-import { RegisterComponent } from './page/register/register.component';
-import { StudentComponent } from './dashboard/student/student.component';
-import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
+import { RootComponent }            from './dashboard/root/root.component';
+import { LoginComponent }           from './page/login/login.component';
+import { RegisterComponent }        from './page/register/register.component';
+import { StudentComponent }         from './dashboard/student/student.component';
+import { FormI1Component }          from './dashboard/studentForms/form-i1/form-i1.component';
+import { CompanyComponent }         from './dashboard/company/company.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -32,8 +33,8 @@ const routes: Routes = [
     {path: 'components/panels', component: PanelsComponent},
     {path: 'components/wizard', component: WizardComponent},
     {path: 'student', component: StudentComponent},
-    {path: 'forms/formI1', component: FormI1Component}
-    
+    {path: 'forms/formI1', component: FormI1Component},
+    {path: 'company', component: CompanyComponent}
   ]}
 ];
 
