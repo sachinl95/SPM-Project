@@ -17,6 +17,9 @@ import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.compon
 import { VivaSchedulesComponent } from './dashboard/viva-schedules/viva-schedules.component'
 import { ScheduleComponent } from './dashboard/viva-schedules/schedule/schedule.component'
 import { FormI1P1Component } from './dashboard/studentForms/form-i1-p1/form-i1-p1.component';
+import { CompanyComponent }         from './dashboard/company/company.component';
+import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
+import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -35,8 +38,12 @@ const routes: Routes = [
     {path: 'forms/form-i6', component: FormI6Component},
     {path: 'admin/viva-schedules', component: VivaSchedulesComponent},
     {path: 'admin/viva-schedules/schedule', component: ScheduleComponent},
-    {path: 'forms/formI1P1', component: FormI1P1Component}
-    
+    {path: 'forms/formI1P1', component: FormI1P1Component},
+    {path: 'company', component: CompanyComponent},
+    {path: 'forms/formI3', component: FormI3Component},
+    {path: 'forms/formI3/internInfo', component: FormI3Component},
+    {path: 'forms/formI3/internshipInfo', component: FormI3Component},
+    {path: 'forms/formI3/dailyDiary', component: DailyDiaryComponent}
   ]}
 ];
 

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule, MatSidenavModule, MatSelectModule, MatFormFieldModule } from '@angular/material';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatNativeDateModule,MatSelectModule,MatDatepickerModule,MatFormFieldModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -42,6 +42,9 @@ import { ScheduleComponent } from './dashboard/viva-schedules/schedule/schedule.
 import { FormI1P1Component } from './dashboard/studentForms/form-i1-p1/form-i1-p1.component';
 import { FormI1P1Service } from './dashboard/studentForms/form-i1-p1/form-i1-p1.service';
 import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p2.component';
+import { CompanyService } from './dashboard/company/company.service';
+import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.component'
+import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
 
 @NgModule({
   declarations: [
@@ -72,9 +75,8 @@ import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p
     VivaSchedulesComponent,
     ScheduleComponent,
     FormI1P2Component,
-    // FormI1P1Component,
-    // FormI3Component,
-    // FormI6Component,
+    DailyDiaryComponent,
+    FormI3Component
   ],
   imports: [
     BrowserModule,
@@ -91,11 +93,14 @@ import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p
     MatSidenavModule,
     MatSelectModule,
     MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatListModule,
     MatCardModule,
   ],
   providers: [SettingsService,
-    RegisterService, FormI1P1Service],
+    RegisterService,CompanyService, FormI1P1Service
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

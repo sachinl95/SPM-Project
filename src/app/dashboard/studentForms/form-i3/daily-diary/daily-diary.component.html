@@ -1,0 +1,52 @@
+<div class="container">
+  <app-navbar title="User Profile"></app-navbar>
+  <div class="row dailyDiary" style="margin-top: 30px">
+    <div class="col-md-12">
+      <div class="card"> 
+        <div class="card-content">
+          <h4 class="card-title"><strong>Daily Diary</strong></h4>
+          <form>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-input-container color="accent">
+                  <input matInput type="text" placeholder="Training Party" [(ngModel)]="firstName" value="Ci" name="firstName">
+                </mat-input-container>
+              </div>
+            </div>
+            <h5>Training Period</h5>
+            <div class="col-md-6"> 
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="From">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6"> 
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker1" placeholder="To">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
+            </div>
+             
+            <div class="row">
+              <div class="col-md-6">
+                <label class="textarea-label">Description</label>
+                <mat-input-container color="accent">
+                  <textarea matInput placeholder="Enter Description about your daily Training"></textarea>
+                </mat-input-container>
+              </div>
+            </div>
+            <div class="row action-btn">
+                <button md-raised-button type="submit" class="btn btn-danger">Reset</button>
+              <button md-raised-button type="submit" class="btn btn-success">Add</button>
+              
+            </div>
+
+           
+          </form>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>

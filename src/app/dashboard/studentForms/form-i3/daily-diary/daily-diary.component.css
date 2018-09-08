@@ -42,8 +42,13 @@
     padding: 20px;
     position: relative;
     margin-top: 40px;
+    margin-left: 100px;  
   }
   
+  .dailyDiary   {
+    width: 100%;
+  }
+
   .card-header {
     position: absolute;
     text-align: center;
@@ -99,6 +104,6 @@
   .action-btn{
     display: flex;
     justify-content: flex-end;
-    padding-right: 15px;
+    padding-left: 15px;
   }
   
