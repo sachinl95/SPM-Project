@@ -43,6 +43,7 @@ import { ScheduleComponent } from './dashboard/viva-schedules/schedule/schedule.
 import { FormI1P1Component } from './dashboard/studentForms/form-i1-p1/form-i1-p1.component';
 import { FormI1P1Service } from './dashboard/studentForms/form-i1-p1/form-i1-p1.service';
 import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p2.component';
+import { CompanyService } from './dashboard/company/company.service';
 
 @NgModule({
   declarations: [
@@ -97,7 +98,8 @@ import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p
     MatCardModule
   ],
   providers: [SettingsService,
-    RegisterService, FormI1P1Service],
+    RegisterService,CompanyService, FormI1P1Service
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
