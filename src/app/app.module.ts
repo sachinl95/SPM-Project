@@ -27,7 +27,6 @@ import { SettingsComponent } from './dashboard/settings/settings.component';
 import { PriceTableComponent } from './dashboard/component/pricetable/pricetable.component';
 import { PanelsComponent } from './dashboard/component/panels/panels.component';
 import { HttpClientModule } from '@angular/common/http'; 
-import { FileSelectDirective } from 'ng2-file-upload';
 
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
@@ -70,7 +69,6 @@ import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p
     CompanyComponent,
     FormI1P1Component,
     FormI6Component,
-    FileSelectDirective,
     VivaSchedulesComponent,
     ScheduleComponent,
     FormI1P2Component,
@@ -94,7 +92,7 @@ import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p
     MatSelectModule,
     MatFormFieldModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
   ],
   providers: [SettingsService,
     RegisterService, FormI1P1Service],
