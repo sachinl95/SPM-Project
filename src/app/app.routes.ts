@@ -1,6 +1,3 @@
-/**
- * Created by wangdi on 26/5/17.
- */
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './dashboard/home/home.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
@@ -16,7 +13,11 @@ import { RootComponent } from './dashboard/root/root.component';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 import { StudentComponent } from './dashboard/student/student.component';
-import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
+import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component';
+import { VivaSchedulesComponent } from './dashboard/viva-schedules/viva-schedules.component'
+import { ScheduleComponent } from './dashboard/viva-schedules/schedule/schedule.component'
+import { FormI1P1Component } from './dashboard/studentForms/form-i1-p1/form-i1-p1.component';
+import { CompanyComponent }         from './dashboard/company/company.component';
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
 import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.component';
 
@@ -34,16 +35,16 @@ const routes: Routes = [
     {path: 'components/panels', component: PanelsComponent},
     {path: 'components/wizard', component: WizardComponent},
     {path: 'student', component: StudentComponent},
-    {path: 'forms/formI1', component: FormI1Component},
+    {path: 'forms/form-i6', component: FormI6Component},
+    {path: 'admin/viva-schedules', component: VivaSchedulesComponent},
+    {path: 'admin/viva-schedules/schedule', component: ScheduleComponent},
+    {path: 'forms/formI1P1', component: FormI1P1Component},
+    {path: 'company', component: CompanyComponent},
     {path: 'forms/formI3', component: FormI3Component},
     {path: 'forms/formI3/internInfo', component: FormI3Component},
     {path: 'forms/formI3/internshipInfo', component: FormI3Component},
     {path: 'forms/formI3/dailyDiary', component: DailyDiaryComponent}
-    
-
-    
   ]}
 ];
 
 export const routing = RouterModule.forRoot(routes);
-

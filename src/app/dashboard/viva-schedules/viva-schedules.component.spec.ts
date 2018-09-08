@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormI6Component } from './form-i6.component';
+import { VivaSchedulesComponent } from './viva-schedules.component';
 
-describe('FormI6Component', () => {
-  let component: FormI6Component;
-  let fixture: ComponentFixture<FormI6Component>;
+describe('VivaSchedulesComponent', () => {
+  let component: VivaSchedulesComponent;
+  let fixture: ComponentFixture<VivaSchedulesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormI6Component ]
+      declarations: [ VivaSchedulesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormI6Component);
+    fixture = TestBed.createComponent(VivaSchedulesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

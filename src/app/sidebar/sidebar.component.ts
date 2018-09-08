@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, OnInit, OnDestroy} from '@angular/core';
 import { SettingsService } from '../services/settings.service';
 import { ROUTES } from './sidebar-routes.config';
-import { Subscription } from '../../../node_modules/rxjs/Subscription';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-sidebar',

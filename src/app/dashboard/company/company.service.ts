@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {constants} from '../../_helpers/appConstants'
-
 @Injectable()
-export class RegisterService {
-  constructor(private http:HttpClient) { }
+export class CompanyService {
 
-  postStudent(student){
-    return this.http.post(constants.HOME_URL+"student",student);
+  constructor(private http:HttpClient) {
+  }
+  postCompany(company){
+      return this.http.post(constants.HOME_URL+"company",company)
   }
 }
