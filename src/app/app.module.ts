@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatSelectModule,MatFormFieldModule } from '@angular/material';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule, MatSidenavModule, MatSelectModule, MatFormFieldModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -33,14 +33,16 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
-import {RegisterService} from './page/register/register.service';
+import { RegisterService } from './page/register/register.service';
 import { StudentComponent } from './dashboard/student/student.component';
 import { CompanyComponent } from './dashboard/company/company.component';
-import { FormI1Component } from './dashboard/studentForms/form-i1/form-i1.component';
-import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
+
 import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component';
 import { VivaSchedulesComponent } from './dashboard/viva-schedules/viva-schedules.component';
 import { ScheduleComponent } from './dashboard/viva-schedules/schedule/schedule.component'
+import { FormI1P1Component } from './dashboard/studentForms/form-i1-p1/form-i1-p1.component';
+import { FormI1P1Service } from './dashboard/studentForms/form-i1-p1/form-i1-p1.service';
+import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p2.component';
 
 @NgModule({
   declarations: [
@@ -66,12 +68,15 @@ import { ScheduleComponent } from './dashboard/viva-schedules/schedule/schedule.
     WizardComponent,
     StudentComponent,
     CompanyComponent,
-    FormI1Component,
-    FormI3Component,
+    FormI1P1Component,
     FormI6Component,
     FileSelectDirective,
     VivaSchedulesComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    FormI1P2Component,
+    // FormI1P1Component,
+    // FormI3Component,
+    // FormI6Component,
   ],
   imports: [
     BrowserModule,
@@ -92,7 +97,7 @@ import { ScheduleComponent } from './dashboard/viva-schedules/schedule/schedule.
     MatCardModule
   ],
   providers: [SettingsService,
-    RegisterService],
+    RegisterService, FormI1P1Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
