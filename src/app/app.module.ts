@@ -12,6 +12,7 @@ import { HomeComponent } from './dashboard/home/home.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import 'hammerjs';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+
 import { FigurecardComponent } from './shared/figurecard/figurecard.component';
 import { ImagecardComponent } from './shared/imagecard/imagecard.component';
 import { TableComponent } from './dashboard/table/table.component';
@@ -32,6 +33,7 @@ import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import {RegisterService} from './page/register/register.service';
 import { SupervisorComponent } from './dashboard/supervisor/supervisor.component'
+import { SupervisorServiceService } from './dashboard/supervisor/supervisor-service.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,7 @@ import { SupervisorComponent } from './dashboard/supervisor/supervisor.component
     HttpClientModule
   ],
   providers: [SettingsService,
-    RegisterService],
+    RegisterService,SupervisorServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

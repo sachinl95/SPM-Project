@@ -10,4 +10,5 @@ export const ROUTES = [
     { path: 'notification', title: 'Notification', icon: 'notifications', children: null },
     { path: 'alert', title: 'Sweet Alert', icon: 'warning', children: null },
     { path: 'settings', title: 'Settings', icon: 'settings', children: null },
+    { path: 'supervisor', title: 'Supervisor', icon: 'account_circle', children: null }
 ];

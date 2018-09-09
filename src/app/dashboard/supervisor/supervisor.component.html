@@ -10,17 +10,17 @@
           <h4 class="card-title">Register Supervisor -
             <small class="category">Enter your details</small>
           </h4>
-          <form>
-            
+          <form #CreateSupervisorForm="ngForm" novalidate>
+
 
               <div class="row">
                   <div class="col-md-4">
                     <mat-input-container color="accent">
-                      <input matInput type="text" placeholder="NIC">
+                      <input matInput type="text" placeholder="Supervisor ID" name="supervisorId" [(ngModel)]="supervisor.supervisorID" #supervisorId="ngModel" >
                     </mat-input-container>
                   </div>
                 </div>
-            
+
 
 
 
@@ -28,12 +28,12 @@
             <div class="row">
               <div class="col-md-6">
                 <mat-input-container color="accent">
-                  <input matInput type="text" placeholder="First Name" [(ngModel)]="firstName" value="Ci" name="firstName">
+                  <input matInput type="text" placeholder="First Name" id="firstname" name="firstname" [(ngModel)]="supervisor.firstname" #firstname="ngModel" value="Ci" >
                 </mat-input-container>
               </div>
               <div class="col-md-6">
                 <mat-input-container color="accent">
-                  <input matInput type="text" placeholder="Last Name" [(ngModel)]="lastName" value="Clia" name="lastName">
+                  <input matInput type="text" placeholder="Last Name" id="lastname" name="lastname" [(ngModel)]="supervisor.lastname" #lastname="ngModel" value="Clia" >
                 </mat-input-container>
               </div>
             </div>
@@ -41,7 +41,7 @@
             <div class="row">
               <div class="col-md-4">
                 <mat-input-container color="accent">
-                  <input matInput type="text" placeholder="NIC">
+                  <input matInput type="text" name="nic" [(ngModel)]="supervisor.nic" placeholder="NIC" #nic="ngModel" id="nic">
                 </mat-input-container>
               </div>
             </div>
@@ -49,37 +49,37 @@
             <div class="row">
               <div class="col-md-4">
                 <mat-input-container color="accent">
-                  <input matInput type="text" placeholder="Password">
+                  <input matInput type="text" [(ngModel)]="supervisor.password" #password="ngModel" placeholder="Password"  id="password" name="password">
                 </mat-input-container>
               </div>
-              
+
             </div>
 
             <div class="row">
               <div class="col-md-4">
                 <mat-input-container color="accent">
-                  <input matInput type="text" placeholder="Re-enter Password">
+                  <input matInput type="text" placeholder="Re-enter Password" name="confirmPassword" [(ngModel)]="supervisor.confirmPassword" #confirmPassword="ngModel">
                 </mat-input-container>
               </div>
-              
+
             </div>
 
 
 
 
-            
+
             <div class="row action-btn">
-              <button md-raised-button type="submit" class="btn btn-rose">REGISTER</button>
+              <button md-raised-button type="submit" class="btn btn-rose" (click)="register(CreateSupervisorForm)">REGISTER</button>
             </div>
 
-            
+
 
           </form>
         </div>
       </div>
     </div>
     <div class="col-md-4">
-      
+
     </div>
   </div>
 </div>
