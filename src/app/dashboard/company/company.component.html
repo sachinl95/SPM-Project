@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="container">
+    <div class="row">
+      <app-header></app-header>
+    </div>
+    <div class="row register-panel">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="card">
+          <h2>Register</h2>
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-part">
+                <div class="row">
+                  <i class="material-icons">credit_card</i>
+                  <mat-input-container color="accent">
+                    <input type="text" matInput placeholder="studentId" name="studentId" [(ngModel)]="company.companyName" #companyName="ngModel"
+                      id="companyName">
+                  </mat-input-container>
+                </div>
+                <div class="row">
+                  <i class="material-icons">face</i>
+                  <mat-input-container color="accent">
+                    <input type="text" matInput placeholder="Name" name="name" [(ngModel)]="company.spervisorName" #spervisorName="ngModel" id="spervisorName">
+                  </mat-input-container>
+                </div>
+      
+                <div class="row">
+                  <i class="material-icons">face</i>
+                  <mat-input-container color="accent">
+                    <input type="text" matInput placeholder="Name" name="name" [(ngModel)]="company.companyContactNum" #companyContactNum="ngModel" id="companyContactNum">
+                  </mat-input-container>
+                </div>
+                <form #CreateStudentForm="ngForm" novalidate>
+                  <div class="row" style="display: flex; justify-content: center">
+                    <button mat-raised-button class="btn btn-primary btn-round" type="submit" (click)="onSubmit(CreateStudentForm)">Register</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,8 @@
 export class Student{
-    name:string;
+    studentId : string;
+    firstName : string;
+    lastName : string;
+    company : string;
+    supervisor : string;
+    academicYear : string;
 }

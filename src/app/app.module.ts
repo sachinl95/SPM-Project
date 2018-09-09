@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatNativeDateModule,MatSelectModule,MatDatepickerModule,MatFormFieldModule,MatTableModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -29,9 +29,24 @@ import { PriceTableComponent } from './dashboard/component/pricetable/pricetable
 import { PanelsComponent } from './dashboard/component/panels/panels.component';
 import { HttpClientModule } from '@angular/common/http'; 
 
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
-import {RegisterService} from './page/register/register.service';
+import { RegisterService } from './page/register/register.service';
+import { DailyDiaryService } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.service';
+import { StudentComponent } from './dashboard/student/student.component';
+import { CompanyComponent } from './dashboard/company/company.component';
+
+import { FormI6Component } from './dashboard/studentForms/form-i6/form-i6.component';
+import { VivaSchedulesComponent } from './dashboard/viva-schedules/viva-schedules.component';
+import { ScheduleComponent } from './dashboard/viva-schedules/schedule/schedule.component'
+import { FormI1P1Component } from './dashboard/studentForms/form-i1-p1/form-i1-p1.component';
+import { FormI1P1Service } from './dashboard/studentForms/form-i1-p1/form-i1-p1.service';
+import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p2.component';
+import { CompanyService } from './dashboard/company/company.service';
+import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.component'
+import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
 import { SupervisorComponent } from './dashboard/supervisor/supervisor.component'
 import { SupervisorServiceService } from './dashboard/supervisor/supervisor-service.service';
 
@@ -57,7 +72,16 @@ import { SupervisorServiceService } from './dashboard/supervisor/supervisor-serv
     PriceTableComponent,
     PanelsComponent,
     WizardComponent,
-    SupervisorComponent
+    SupervisorComponent,
+    StudentComponent,
+    CompanyComponent,
+    FormI1P1Component,
+    FormI6Component,
+    VivaSchedulesComponent,
+    ScheduleComponent,
+    FormI1P2Component,
+    DailyDiaryComponent,
+    FormI3Component
   ],
   imports: [
     BrowserModule,
@@ -70,10 +94,19 @@ import { SupervisorServiceService } from './dashboard/supervisor/supervisor-serv
     MatInputModule,
     MatMenuModule,
     MatCheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatListModule,
+    MatCardModule,
+    MatTableModule
   ],
   providers: [SettingsService,
-    RegisterService,SupervisorServiceService],
+    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService, SupervisorServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
