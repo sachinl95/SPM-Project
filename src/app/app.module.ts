@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatNativeDateModule,MatSelectModule,MatDatepickerModule,MatFormFieldModule } from '@angular/material';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatNativeDateModule,MatSelectModule,MatDatepickerModule,MatFormFieldModule,MatTableModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -34,6 +34,7 @@ import {MatCardModule} from '@angular/material/card';
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import { RegisterService } from './page/register/register.service';
+import { DailyDiaryService } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.service';
 import { StudentComponent } from './dashboard/student/student.component';
 import { CompanyComponent } from './dashboard/company/company.component';
 
@@ -98,10 +99,11 @@ import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.compon
     MatDatepickerModule,
     MatNativeDateModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ],
   providers: [SettingsService,
-    RegisterService,CompanyService, FormI1P1Service
+    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService
   ],
   bootstrap: [AppComponent]
 })
