@@ -26,7 +26,7 @@ export class DailyDiaryComponent implements OnInit {
           console.log(data);
         }
       )
-      alert("Student Add Succefully");
+      alert("Student Daily Diary Succefully");
       
     }
     console.log(form);
