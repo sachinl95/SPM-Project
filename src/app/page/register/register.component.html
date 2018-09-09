@@ -47,7 +47,7 @@
                         <div class="col-md-6">
                             <mat-input-container color="accent">
                                 <mat-select placeholder="Supervisor" [(ngModel)]="student.supervisor" #supervisor="ngModel" name="supervisor">
-                                    <mat-option *ngFor="let supervisor of companies" [value]="supervisor.id">{{supervisor.name}}</mat-option>
+                                    <mat-option *ngFor="let supervisor of supervisors" [value]="supervisor.id">{{supervisor.name}}</mat-option>
                                 </mat-select>
                             </mat-input-container>
                         </div>
