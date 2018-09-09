@@ -1,9 +1,14 @@
 <app-navbar title="Form I-3"></app-navbar>
 <div class="card">
-  <h2 style="text-align: left;"><strong>INTERNS DAILY DIARY</strong></h2>
+  <h2 style="text-align: left;"><strong>Intern Information</strong></h2>
   <div class="example-container">
     <form autocomplete="off" #CreateUserForm="ngForm" novalidate>
-        <h5 style="text-align: left;"><strong>Intern's Information</strong></h5>
+        <h5 style="text-align: left;"><strong>Personal Information</strong></h5>
+        <div class="row">
+          <mat-form-field>
+              <input  matInput placeholder="Student ID No." class="fullLength">
+            </mat-form-field>
+        </div> 
       <div class="row">
         <mat-form-field>
           <input matInput placeholder="Intern's Name" class="fullLength">
@@ -50,6 +55,8 @@
           <button mat-flat-button color="primary" id="Submit">Submit to Supervisor</button>
          
         </div>
+
+       
 
     </form>
   </div>
