@@ -11,9 +11,7 @@ export class VivaSchedulesComponent {
 
   constructor(private http: Http) { }
 
-  students = [
-    { studentId: 'IT16005372', name: 'Sameer', role: 'Trainee Software Developer' },
-  ]
+  students = []
 
   ngOnInit() {
     this.http.get('http://localhost:3000/admin/schedules').map(res => res.json()).subscribe(
@@ -26,12 +24,19 @@ export class VivaSchedulesComponent {
     )
   }
 
-  formatDateTime(dateTime) {
-    let formattedDateTime
-    let dateTimeArray = dateTime.split('T')
-    let date = dateTimeArray[0]
-    let time = dateTimeArray[1]
-    
+  formatAMPM(date) {
+    let dateString = date
+    date = new Date(date)
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    let dateArray = dateString.split("T")
+    let dateOnly = dateArray[0]
+    return dateOnly + " " + strTime;
   }
 
 }

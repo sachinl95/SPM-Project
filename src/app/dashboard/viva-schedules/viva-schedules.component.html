@@ -11,7 +11,7 @@
     </tr>
     <tr *ngFor="let student of students">
       <td>{{student.studentId}}</td>
-      <td>{{student.dateTime}}</td>
+      <td>{{formatAMPM(student.dateTime)}}</td>
       <td>{{student.location}}</td>
     </tr>
 
