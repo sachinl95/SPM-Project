@@ -39,4 +39,14 @@ export class VivaSchedulesComponent {
     return dateOnly + " " + strTime;
   }
 
+  rowClickEvent(studentId) {
+    alert(studentId + "  " + this.getServerURL())
+    let URL = 'http://' + this.getServerURL() + ''
+  }
+
+  getServerURL() {
+    let URLArray = window.location.href.split("/")
+    return URLArray[2]
+  }
+
 }
