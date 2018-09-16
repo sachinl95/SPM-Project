@@ -38,7 +38,7 @@ const routes: Routes = [
     {path: 'student', component: StudentComponent},
     {path: 'forms/form-i6', component: FormI6Component},
     {path: 'admin/viva-schedules', component: VivaSchedulesComponent},
-    {path: 'admin/viva-schedules/schedule', component: ScheduleComponent},
+    {path: 'admin/viva-schedules/schedule/:studentId', component: ScheduleComponent},
     {path: 'forms/formI1P1', component: FormI1P1Component},
     {path: 'company', component: CompanyComponent},
     {path: 'forms/formI3', component: FormI3Component},

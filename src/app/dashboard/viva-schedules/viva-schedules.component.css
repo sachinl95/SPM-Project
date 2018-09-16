@@ -1,13 +1,13 @@
 table {
-    width: 100%;
-  }
-  
-  th.mat-sort-header-sorted {
-    color: black;
-  }
-  
-  .card {
-    padding: 20px 0 20px 50px;
-    margin: 8% 10%;
-    width: 80%;
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.card {
+  padding: 20px 0 20px 50px;
+  margin: 8% 10%;
+  width: 80%;
 }

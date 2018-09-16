@@ -1,22 +1,21 @@
 <mat-card class="card">
-  <mat-card-title>Viva Schedules</mat-card-title>
+  <mat-card-title>Viva Schedules
+    <!-- <p style="padding-left: 5px"></p> -->
 
-
+  </mat-card-title>
+  <div style="float: right; position: absolute; top: 15px; right: 100px;">
+    <button md-raised-button type="button" class="btn btn-rose" routerLink="/">Assign Viva for Student</button>
+  </div>
   <table>
-
     <tr>
       <th>Student ID</th>
       <th>Date & Time</th>
       <th>Location</th>
     </tr>
-    <tr *ngFor="let student of students" (click)="rowClickEvent(student.studentId)">
+    <tr *ngFor="let student of students" [routerLink]="[ '/dashboard/admin/viva-schedules/schedule', student.studentId ]">
       <td>{{student.studentId}}</td>
       <td>{{formatAMPM(student.dateTime)}}</td>
       <td>{{student.location}}</td>
     </tr>
-
   </table>
-
-
-
 </mat-card>

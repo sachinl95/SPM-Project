@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
 import { Http, Response } from '@angular/http'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-viva-schedules',
@@ -9,7 +10,7 @@ import { Http, Response } from '@angular/http'
 })
 export class VivaSchedulesComponent {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private router: Router) { }
 
   students = []
 
@@ -36,7 +37,7 @@ export class VivaSchedulesComponent {
     var strTime = hours + ':' + minutes + ' ' + ampm;
     let dateArray = dateString.split("T")
     let dateOnly = dateArray[0]
-    return dateOnly + " " + strTime;
+    return dateOnly + ' ' + strTime;
   }
 
   rowClickEvent(studentId) {
@@ -47,6 +48,14 @@ export class VivaSchedulesComponent {
   getServerURL() {
     let URLArray = window.location.href.split("/")
     return URLArray[2]
+  }
+
+  goToSchedule(studentId) {
+    this.router.navigate(['admin/viva-schedules/schedule/:studentId', studentId])
+  }
+
+  normalJavascript(studentId){
+    window.location.href = 'http://' + this.getServerURL() + '/dashboard/admin/viva-schedules/schedule/' + studentId
   }
 
 }
