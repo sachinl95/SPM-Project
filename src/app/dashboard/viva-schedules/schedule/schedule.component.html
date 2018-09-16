@@ -1,3 +1,31 @@
 <mat-card class="card">
-
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-content style="padding-bottom: 500px">
+        <div class="col-md-12">
+            <mat-input-container>
+                <input matInput type="text" placeholder="Student ID" />
+            </mat-input-container>
+        </div>
+        <div class="col-md-3">
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker1" [(ngModel)]="scheduleObj.dateTime" #endDate="ngModel"
+                    placeholder="Date" name="endDate">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="col-md-3" style="padding-top: 10px;">
+            <label>HH</label>
+            <input style="max-width: 40px;" maxlength="2" type="number" [(ngModel)]="hour" />
+            <label>MM</label>
+            <input style="max-width: 30px;" maxlength="2" type="number" [(ngModel)]="minute" />
+            <select [(ngModel)]="amPm">
+                <option>AM</option>
+                <option>PM</option>
+            </select>
+        </div>
+        <div class="col-md-6" style="padding-top: 10px;">
+            <p>{{scheduleObj.dateTime}} {{hour}}:{{minute}} {{amPm}}</p>
+        </div>
+    </mat-card-content>
 </mat-card>
