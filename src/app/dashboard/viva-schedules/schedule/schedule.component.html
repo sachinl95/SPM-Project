@@ -1,9 +1,9 @@
 <mat-card class="card">
-    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-title>{{actionText}}</mat-card-title>
     <mat-card-content style="padding-bottom: 500px">
         <div class="col-md-12">
             <mat-input-container>
-                <input matInput type="text" placeholder="Student ID" />
+                <input matInput type="text" placeholder="Student ID" [(ngModel)]="scheduleObj.studentId"/>
             </mat-input-container>
         </div>
         <div class="col-md-3">
@@ -15,10 +15,10 @@
             </mat-form-field>
         </div>
         <div class="col-md-3" style="padding-top: 10px;">
-            <label>HH</label>
-            <input style="max-width: 40px;" maxlength="2" type="number" [(ngModel)]="hour" />
-            <label>MM</label>
-            <input style="max-width: 30px;" maxlength="2" type="number" [(ngModel)]="minute" />
+            <label>Time </label>
+            <input style="max-width: 30px;" maxlength="2" type="text" [(ngModel)]="hour" />
+            <label> . </label>
+            <input style="max-width: 30px;" maxlength="2" type="text" [(ngModel)]="minute" />
             <select [(ngModel)]="amPm">
                 <option>AM</option>
                 <option>PM</option>
@@ -26,6 +26,14 @@
         </div>
         <div class="col-md-6" style="padding-top: 10px;">
             <p>{{scheduleObj.dateTime}} {{hour}}:{{minute}} {{amPm}}</p>
+        </div>
+        <div class="col-md-12">
+            <mat-input-container>
+                <input matInput type="text" placeholder="Location" [(ngModel)]="scheduleObj.location"/>
+            </mat-input-container>
+        </div>
+        <div class="col-md-12">
+            <button md-raised-button type="button" class="btn btn-rose" routerLink="/">{{actionText}}</button>
         </div>
     </mat-card-content>
 </mat-card>

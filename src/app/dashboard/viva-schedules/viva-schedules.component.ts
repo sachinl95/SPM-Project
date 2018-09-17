@@ -17,7 +17,7 @@ export class VivaSchedulesComponent {
   ngOnInit() {
     this.http.get('http://localhost:3000/admin/schedules').map(res => res.json()).subscribe(
       success => {
-        this.students = success;
+        this.students = success
       },
       error => {
         alert(error)
@@ -28,16 +28,16 @@ export class VivaSchedulesComponent {
   formatAMPM(date) {
     let dateString = date
     date = new Date(date)
-    var hours = date.getHours();
+    var hours = date.getHours()
     var minutes = date.getMinutes();
-    var ampm = hours >= 12 ? 'pm' : 'am';
-    hours = hours % 12;
+    var ampm = hours >= 12 ? 'pm' : 'am'
+    hours = hours % 12
     hours = hours ? hours : 12; // the hour '0' should be '12'
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    var strTime = hours + ':' + minutes + ' ' + ampm;
+    minutes = minutes < 10 ? '0' + minutes : minutes
+    var strTime = hours + ':' + minutes + ' ' + ampm
     let dateArray = dateString.split("T")
     let dateOnly = dateArray[0]
-    return dateOnly + ' ' + strTime;
+    return dateOnly + ' ' + strTime
   }
 
   rowClickEvent(studentId) {
@@ -54,7 +54,7 @@ export class VivaSchedulesComponent {
     this.router.navigate(['admin/viva-schedules/schedule/:studentId', studentId])
   }
 
-  normalJavascript(studentId){
+  normalJavascript(studentId) {
     window.location.href = 'http://' + this.getServerURL() + '/dashboard/admin/viva-schedules/schedule/' + studentId
   }
 
