@@ -12,67 +12,87 @@
           </h4>
           <form #CreateSupervisorForm="ngForm" novalidate>
 
-
               <div class="row">
                   <div class="col-md-4">
                     <mat-input-container color="accent">
-                      <input matInput type="text" placeholder="Supervisor ID" name="supervisorId" [(ngModel)]="supervisor.supervisorID" #supervisorId="ngModel" >
+                      <input matInput type="text" placeholder="NIC" name="nic" [(ngModel)]="supervisor.nic" #nic="ngModel" 
+                      pattern="[0-9]{9}[x|X|v|V]$" required>
                     </mat-input-container>
+                    <div class="alert alert-danger" *ngIf="nic.touched && !nic.valid">
+                      <div *ngIf="nic.errors.required">NIC Required</div>
+                      <div *ngIf="nic.errors.pattern">Enter Valid NIC</div>
+                    </div>
                   </div>
                 </div>
 
-
-
-
-
             <div class="row">
               <div class="col-md-6">
                 <mat-input-container color="accent">
-                  <input matInput type="text" placeholder="First Name" id="firstname" name="firstname" [(ngModel)]="supervisor.firstname" #firstname="ngModel" value="Ci" >
+                  <input matInput type="text" placeholder="First Name" id="firstname" name="firstname" [(ngModel)]="supervisor.firstname" #firstname="ngModel" value="Ci" 
+                  required>
                 </mat-input-container>
+                <div class="alert alert-danger" *ngIf="firstname.touched && !firstname.valid">
+                  <div *ngIf="firstname.errors.required">First Name Required</div>
+                </div>
               </div>
+
+
               <div class="col-md-6">
                 <mat-input-container color="accent">
-                  <input matInput type="text" placeholder="Last Name" id="lastname" name="lastname" [(ngModel)]="supervisor.lastname" #lastname="ngModel" value="Clia" >
+                  <input matInput type="text" placeholder="Last Name" id="lastname" name="lastname" [(ngModel)]="supervisor.lastname" #lastname="ngModel" value="Clia" 
+                  required>
                 </mat-input-container>
+                <div class="alert alert-danger" *ngIf="lastname.touched && !lastname.valid">
+                  <div *ngIf="lastname.errors.required">Last Name Required</div>
+                </div>
               </div>
             </div>
 
             <div class="row">
               <div class="col-md-4">
                 <mat-input-container color="accent">
-                  <input matInput type="text" name="nic" [(ngModel)]="supervisor.nic" placeholder="NIC" #nic="ngModel" id="nic">
+                  <input matInput type="text" [(ngModel)]="supervisor.email" #email="ngModel" placeholder="Email"  id="email" name="email" 
+                  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                 </mat-input-container>
+                <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                  <div *ngIf="email.errors.required">Last Name Required</div>
+                  <div *ngIf="email.errors.pattern">Please Enter Valid Email</div>
+                </div>
               </div>
+            </div>
+
+
+
+            <div class="row">
+              <div class="col-md-4">
+                <mat-input-container color="accent">
+                  <input matInput type="text" [(ngModel)]="supervisor.password" #password="ngModel" placeholder="Password"  id="password" name="password" 
+                  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}" required>
+                </mat-input-container>
+                <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+                  <div *ngIf="password.errors.required">Password Required</div>
+                  <div *ngIf="password.errors.pattern">Password Should Contain 8 Characters, One Lower Case, One Upper Case, And One Special Character</div>
+                </div>
+              </div>
+
             </div>
 
             <div class="row">
               <div class="col-md-4">
                 <mat-input-container color="accent">
-                  <input matInput type="text" [(ngModel)]="supervisor.password" #password="ngModel" placeholder="Password"  id="password" name="password">
+                  <input matInput type="text" placeholder="Re-enter Password" name="confirmPassword" [(ngModel)]="supervisor.confirmPassword" #confirmPassword="ngModel" 
+                  required>
                 </mat-input-container>
+                <div class="alert alert-danger" *ngIf="confirmPassword.touched && !confirmPassword.valid">
+                  <div *ngIf="confirmPassword.errors.required">Last Name Required</div>
+                </div>
               </div>
 
             </div>
-
-            <div class="row">
-              <div class="col-md-4">
-                <mat-input-container color="accent">
-                  <input matInput type="text" placeholder="Re-enter Password" name="confirmPassword" [(ngModel)]="supervisor.confirmPassword" #confirmPassword="ngModel">
-                </mat-input-container>
-              </div>
-
-            </div>
-
-
-
-
 
             <div class="row action-btn">
               <button md-raised-button type="submit" class="btn btn-rose" (click)="register(CreateSupervisorForm)">REGISTER</button>
             </div>
-
-
 
           </form>
         </div>

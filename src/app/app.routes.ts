@@ -21,6 +21,7 @@ import { FormI1P1Component } from './dashboard/studentForms/form-i1-p1/form-i1-p
 import { CompanyComponent }         from './dashboard/company/company.component';
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
 import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.component';
+import { AssignStudentComponent } from './dashboard/assign-student/assign-student.component'
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -45,7 +46,10 @@ const routes: Routes = [
     {path: 'forms/formI3/internInfo', component: FormI3Component},
     {path: 'forms/formI3/internshipInfo', component: FormI3Component},
     {path: 'forms/formI3/dailyDiary', component: DailyDiaryComponent},
-    {path: 'supervisor', component:SupervisorComponent}
+    {path: 'supervisor', component:SupervisorComponent},
+    {path: 'assign-student', component:AssignStudentComponent},
+    
+
   ]}
 ];
 

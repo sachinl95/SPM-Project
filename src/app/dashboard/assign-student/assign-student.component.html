@@ -1,0 +1,100 @@
+<div class="container">
+  <app-navbar title="User Profile"></app-navbar>
+  <div class="row" style="margin-top: 30px">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <i class="material-icons">perm_identity</i>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Supervisor Adds student-
+            <small class="category">Enter student details under a supervisor</small>
+          </h4>
+          <form #createAssign="ngForm" novalidate>
+
+            <div class="row">
+              <div class="col-md-4">
+                <mat-input-container color="accent">
+                
+                  <input matInput type="text" placeholder="NIC" name="nic" [(ngModel)]="assign.nic" #nic="ngModel" 
+                  required>
+                </mat-input-container>
+                <div class="alert alert-danger">
+                    Supervisor Name Required
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-4">
+                <mat-input-container color="accent">
+                  
+                
+                  <input matInput type="text" placeholder="student Name" name="supervisorName" [(ngModel)]="supervisor.supervisorName" #supervisorName="ngModel" 
+                   required>
+                </mat-input-container>
+                <!-- <div class="alert alert-danger" *ngIf="supervisorName.touched && !supervisorName.valid">
+                    Supervisor Name Required
+                </div> -->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <mat-input-container color="accent">
+                  <!-- <input matInput type="text" placeholder="Supervisor Name" [(ngModel)]="supervisorName" #supervisorName="ngModel"  name="supervisorName" required> -->
+                
+                  <input matInput type="text" placeholder="student ID" name="supervisorName" 
+                   required>
+                </mat-input-container>
+                <!-- <div class="alert alert-danger" *ngIf="supervisorName.touched && !supervisorName.valid">
+                    Supervisor Name Required
+                </div> -->
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-4">
+                <mat-input-container color="accent">
+                  <!-- <input matInput type="text" placeholder="Supervisor Name" [(ngModel)]="supervisorName" #supervisorName="ngModel"  name="supervisorName" required> -->
+                
+                  <input matInput type="text" placeholder="company Name" name="supervisorName" 
+                   required>
+                </mat-input-container>
+                <!-- <div class="alert alert-danger" *ngIf="supervisorName.touched && !supervisorName.valid">
+                    Supervisor Name Required
+                </div> -->
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-4">
+                <mat-input-container color="accent">
+                  <!-- <input matInput type="text" placeholder="Supervisor Name" [(ngModel)]="supervisorName" #supervisorName="ngModel"  name="supervisorName" required> -->
+                
+                  <input matInput type="date" placeholder="date Started" name="supervisorName" 
+                   required>
+                </mat-input-container>
+                <!-- <div class="alert alert-danger" *ngIf="supervisorName.touched && !supervisorName.valid">
+                    Supervisor Name Required
+                </div> -->
+              </div>
+            </div>
+
+            <div class="row action-btn">
+              <button md-raised-button type="submit" class="btn btn-rose" (click)="register(CreateSupervisorForm)">REGISTER</button>
+            </div>
+
+            
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+</div>

@@ -49,6 +49,7 @@ import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diar
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
 import { SupervisorComponent } from './dashboard/supervisor/supervisor.component'
 import { SupervisorServiceService } from './dashboard/supervisor/supervisor-service.service';
+import { AssignStudentComponent } from './dashboard/assign-student/assign-student.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { SupervisorServiceService } from './dashboard/supervisor/supervisor-serv
     ScheduleComponent,
     FormI1P2Component,
     DailyDiaryComponent,
-    FormI3Component
+    FormI3Component,
+    AssignStudentComponent
   ],
   imports: [
     BrowserModule,
