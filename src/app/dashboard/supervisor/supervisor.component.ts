@@ -12,7 +12,7 @@ import { Supervisor } from './Supervisor';
 
 
 export class SupervisorComponent implements OnInit {
-
+  matchError: boolean
   supervisor: Supervisor;
   constructor(private superVisorService:SupervisorServiceService) { }
 
@@ -34,5 +34,6 @@ export class SupervisorComponent implements OnInit {
   
    console.log(this.supervisor);
   }
+
 
 }

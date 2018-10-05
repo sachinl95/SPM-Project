@@ -66,7 +66,7 @@
             <div class="row">
               <div class="col-md-4">
                 <mat-input-container color="accent">
-                  <input matInput type="text" [(ngModel)]="supervisor.password" #password="ngModel" placeholder="Password"  id="password" name="password" 
+                  <input matInput type="password" [(ngModel)]="supervisor.password" #password="ngModel" placeholder="Password"  id="password" name="password" 
                   pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}" required>
                 </mat-input-container>
                 <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
@@ -80,11 +80,12 @@
             <div class="row">
               <div class="col-md-4">
                 <mat-input-container color="accent">
-                  <input matInput type="text" placeholder="Re-enter Password" name="confirmPassword" [(ngModel)]="supervisor.confirmPassword" #confirmPassword="ngModel" 
+                  <input matInput type="password" placeholder="Re-enter Password" name="confirmPassword" [(ngModel)]="supervisor.confirmPassword" #confirmPassword="ngModel" 
                   required>
                 </mat-input-container>
                 <div class="alert alert-danger" *ngIf="confirmPassword.touched && !confirmPassword.valid">
-                  <div *ngIf="confirmPassword.errors.required">Last Name Required</div>
+                  <div *ngIf="confirmPassword.errors.required">Password Required</div>
+                  <div *ngIf="matchError === true">Password do not match</div>
                 </div>
               </div>
 
