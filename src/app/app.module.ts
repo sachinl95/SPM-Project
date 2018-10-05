@@ -50,6 +50,7 @@ import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.compon
 import { SupervisorComponent } from './dashboard/supervisor/supervisor.component'
 import { SupervisorServiceService } from './dashboard/supervisor/supervisor-service.service';
 import { AssignStudentComponent } from './dashboard/assign-student/assign-student.component';
+import {AssignService} from './dashboard/assign-student/assign.service'
 
 @NgModule({
   declarations: [
@@ -107,7 +108,7 @@ import { AssignStudentComponent } from './dashboard/assign-student/assign-studen
     MatTableModule
   ],
   providers: [SettingsService,
-    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService, SupervisorServiceService
+    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService, SupervisorServiceService,AssignService
   ],
   bootstrap: [AppComponent]
 })

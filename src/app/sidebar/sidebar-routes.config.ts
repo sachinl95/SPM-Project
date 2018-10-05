@@ -13,7 +13,7 @@ export const ROUTES = [
     // { path: 'settings', title: 'Settings', icon: 'settings', children: null },
     { path: 'company', title: 'Company', icon: 'domain', children: null },  
     
-    //{ path: 'assign-student', title: 'Assign', icon: 'domain', children: null },  
+    { path: 'assign-student', title: 'Assign', icon: 'domain', children: null },  
     
 
     { path: 'profile', title: 'profile', icon: 'domain', children: null },

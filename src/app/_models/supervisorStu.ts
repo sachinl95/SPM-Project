@@ -3,5 +3,5 @@ export class supervisorStu{
     studentName:string;
     studentID:string;
     companyName:string;
-    dateStarted:string;
+    dateStarted:Date;
 }
