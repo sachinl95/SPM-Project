@@ -16,16 +16,9 @@
         </div>
         <div class="col-md-3" style="padding-top: 10px;">
             <label>Time </label>
-            <input style="max-width: 30px;" maxlength="2" type="text" [(ngModel)]="hour" />
-            <label> . </label>
-            <input style="max-width: 30px;" maxlength="2" type="text" [(ngModel)]="minute" />
-            <select [(ngModel)]="amPm">
-                <option>AM</option>
-                <option>PM</option>
-            </select>
-        </div>
-        <div class="col-md-6" style="padding-top: 10px;">
-            <p>{{scheduleObj.dateTime}} {{hour}}:{{minute}} {{amPm}}</p>
+            <input style="max-width: 40px;" maxlength="2" type="number" min="0" max="23" [(ngModel)]="hour" />
+            <label> : </label>
+            <input style="max-width: 50px;" maxlength="2" type="number" min="0" max="59" [(ngModel)]="minute" />
         </div>
         <div class="col-md-12">
             <mat-input-container>
@@ -33,7 +26,7 @@
             </mat-input-container>
         </div>
         <div class="col-md-12">
-            <button md-raised-button type="button" class="btn btn-rose" routerLink="/">{{actionText}}</button>
+            <button md-raised-button type="button" class="btn btn-rose" (click)="addOrUpdate()">{{actionText}}</button>
         </div>
     </mat-card-content>
 </mat-card>

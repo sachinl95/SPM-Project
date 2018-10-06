@@ -13,7 +13,7 @@
     </tr>
     <tr *ngFor="let student of students" [routerLink]="[ '/dashboard/admin/viva-schedules/schedule', student.studentId ]">
       <td>{{student.studentId}}</td>
-      <td>{{formatAMPM(student.dateTime)}}</td>
+      <td>{{student.dateTime}}</td>
       <td>{{student.location}}</td>
     </tr>
   </table>
