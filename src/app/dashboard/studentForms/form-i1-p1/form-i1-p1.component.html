@@ -32,21 +32,21 @@
       </div>
       <div class="row">
         <mat-form-field class="fullLength">
-          <input type="number" maxlength="10" matInput placeholder="Home Phone" class="fullLength" name="homePhone" [(ngModel)]="formI1P1.homePhone" #homePhone="ngModel"
+          <input (keypress)="keyPress($event)" minlength=10 maxlength=10 matInput placeholder="Home Phone" class="fullLength" name="homePhone" [(ngModel)]="formI1P1.homePhone" #homePhone="ngModel"
           id="homePhone" required>
           <mat-hint>maximum:10 numbers</mat-hint>
           <mat-error *ngIf="validationFormControl.hasError('required')">
-            Home Phone is <strong>required</strong>
+            Home Phone is <strong>required(10 numbers required)</strong>
            </mat-error>
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field class="fullLength">
-          <input type="number" maxlength="10" matInput placeholder="Mobile Phone" class="fullLength" name="mobilePhone" [(ngModel)]="formI1P1.mobilePhone" #mobilePhone="ngModel"
+          <input (keypress)="keyPress($event)" minlength=10 maxlength=10 matInput placeholder="Mobile Phone" class="fullLength" name="mobilePhone" [(ngModel)]="formI1P1.mobilePhone" #mobilePhone="ngModel"
           id="mobilePhone" required>
           <mat-hint>maximum:10 numbers</mat-hint>
           <mat-error *ngIf="validationFormControl.hasError('required')">
-            Mobile Phone is <strong>required</strong>
+            Mobile Phone is <strong>required(10 numbers required)</strong>
            </mat-error>
         </mat-form-field>
       </div>
