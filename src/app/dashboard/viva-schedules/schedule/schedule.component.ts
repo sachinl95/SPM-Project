@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { HttpClient } from '@angular/common/http'
 import { constants } from '../../../_helpers/appConstants'
 import axios from 'axios'
@@ -25,7 +25,7 @@ export class ScheduleComponent implements OnInit {
 
     private scheduleObj = new this.scheduleClass()
 
-    constructor(private route: ActivatedRoute, private http: HttpClient) { }
+    constructor(private route: ActivatedRoute, private http: HttpClient, private router: Router) { }
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
@@ -76,7 +76,7 @@ export class ScheduleComponent implements OnInit {
         let dateTime = temp.getUTCFullYear() + '-' + month + '-' + date
             + 'T' + hour + ':' + minute + ':00.000Z'
         let payload = {
-            studentId: this.studentId,
+            studentId: this.scheduleObj.studentId,
             dateTime: dateTime,
             location: this.scheduleObj.location
         }
@@ -90,6 +90,15 @@ export class ScheduleComponent implements OnInit {
             } else {
                 alert('The viva schedule has been updated')
             }
+            this.router.navigate(['dashboard/admin/viva-schedules'])
+        }).catch(error => {
+            alert(error.response.data.message)
+        })
+    }
+
+    delete() {
+        axios.delete(constants.HOME_URL + 'admin/schedules/' + this.studentId).then(response => {
+            alert('The viva schedule for student ' + this.studentId + ' has been deleted')
         }).catch(error => {
             alert(error.response.data.message)
         })

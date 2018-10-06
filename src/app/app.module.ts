@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
 import { RouterModule } from '@angular/router';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatNativeDateModule,MatSelectModule,MatDatepickerModule,MatFormFieldModule,MatTableModule } from '@angular/material';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatNativeDateModule,MatSelectModule,MatDatepickerModule,MatFormFieldModule,MatTableModule, MatIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -104,7 +104,8 @@ import { SupervisorServiceService } from './dashboard/supervisor/supervisor-serv
     MatListModule,
     MatCardModule,
     MatTableModule,
-    RouterModule
+    RouterModule,
+    MatIconModule
   ],
   providers: [SettingsService,
     RegisterService,CompanyService, FormI1P1Service,DailyDiaryService, SupervisorServiceService

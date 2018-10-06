@@ -1,5 +1,7 @@
 <mat-card class="card">
-    <mat-card-title>{{actionText}}</mat-card-title>
+    <mat-icon class="col-sm-4" [routerLink]="['/dashboard/admin/viva-schedules']">arrow_back</mat-icon>
+    <mat-card-title class="col-sm-4">{{actionText}}</mat-card-title>
+    <mat-icon class="col-sm-4" (click)="delete()" *ngIf="studentId !== undefined">delete</mat-icon>
     <mat-card-content style="padding-bottom: 500px">
         <div class="col-md-12">
             <mat-input-container>
