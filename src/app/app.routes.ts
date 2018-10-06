@@ -21,6 +21,7 @@ import { CompanyComponent }         from './dashboard/company/company.component'
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
 import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.component';
 import {InternInfoComponent } from './dashboard/studentForms/form-i3/intern-info/intern-info.component';
+import {SendMonthlyReportComponent } from './dashboard/studentForms/form-i3/send-monthly-report/send-monthly-report.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -44,7 +45,8 @@ const routes: Routes = [
     {path: 'forms/formI3', component: FormI3Component}, 
     {path: 'forms/formI3/internshipInfo', component: FormI3Component},
     {path: 'forms/formI3/dailyDiary', component: DailyDiaryComponent},
-    {path:'forms/formI3/internInfo', component : InternInfoComponent}
+    {path:'forms/formI3/internInfo', component : InternInfoComponent},
+    {path:'forms/formI3/monthlyReport', component : SendMonthlyReportComponent},
   ]}
 ];
 
