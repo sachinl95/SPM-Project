@@ -1,0 +1,63 @@
+<app-navbar title="Form I-3"></app-navbar>
+<div class="card">
+  <h2 style="text-align: left;"><strong>Intern Information</strong></h2>
+  <div class="example-container">
+    <form autocomplete="off" #CreateUserForm="ngForm" novalidate>
+        <h5 style="text-align: left;"><strong>Personal Information</strong></h5>
+        <div class="row">
+          <mat-form-field>
+              <input  matInput placeholder="Student ID No." class="fullLength">
+            </mat-form-field>
+        </div> 
+      <div class="row">
+        <mat-form-field>
+          <input matInput placeholder="Intern's Name" class="fullLength">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <input matInput placeholder="Student ID No" class="fullLength">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <input matInput placeholder="Intern's Private Address" class="fullLength">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <input type="tel" matInput placeholder="Contact Number" class="fullLength">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <input type="email" matInput placeholder="E-mail Addresses" class="fullLength">
+          <mat-hint>*Use comma(,) to seperate multiple email addresses</mat-hint>
+        </mat-form-field>
+      </div>
+      <br/>
+      <h5 style="text-align: left;"><strong>Internship Information</strong></h5>
+      <div class="row">
+          <mat-form-field>
+            <input type="tel" matInput placeholder="Internship Title" class="fullLength">
+          </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field>
+              <input type="tel" matInput placeholder="Specilisation" class="fullLength">
+            </mat-form-field>
+          </div>
+     
+
+        <div class="button-row" > 
+          <button mat-flat-button color="warn" id="Reset">Reset</button> 
+          <button mat-flat-button color="accent" id="Cancel">Cancel</button>
+          <button mat-flat-button color="primary" id="Submit">Submit to Supervisor</button>
+         
+        </div>
+
+       
+
+    </form>
+  </div>
+</div>

@@ -4,8 +4,8 @@ export const ROUTES = [
     // { path: 'supervisor', title: 'supervisor', icon: 'supervisor_account', children: null },
     {path: 'forms/formI1P1', title: 'Form I-1', icon: 'apps', children: null }, 
         {path: 'forms/form-i6', title: 'Form I-6', icon: 'apps', children: null },
-      { path: '#formI3', id: 'formI3', title: 'Form I-3', icon: 'apps', children: [
-        {path: 'forms/formI3', title: 'Intern Info', icon: 'II'},
+        { path: '#formI3', id: 'formI3', title: 'Form I-3', icon: 'apps', children: [
+        {path: 'forms/formI3/internInfo', title: 'Intern Info', icon: 'II'},
         {path: 'forms/formI3/dailyDiary', title: 'Dialy Diary', icon: 'DD'}
     ] },
     // { path: 'notification', title: 'Notification', icon: 'notifications', children: null },
