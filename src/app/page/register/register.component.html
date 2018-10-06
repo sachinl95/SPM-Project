@@ -14,55 +14,105 @@
                     <div class="row">
                       <div class="col-md-6 offset-md-6">
                         <mat-input-container color="accent">
-                          <input matInput type="text" placeholder="Student ID" [(ngModel)]="student.studentId" #studentId="ngModel" value="Ci" name="studentId">
+                          <input matInput type="text" placeholder="Student ID" [(ngModel)]="student.studentId" #studentId="ngModel" value="Ci" name="studentId" required #spy>
                         </mat-input-container>
+                        <div [hidden]="studentId.valid || studentId.pristine"
+                             class="alert alert-danger">
+                            Please Enter Student Id
+                        </div>
                       </div>
                     </div>
       
                     <div class="row">
                         <div class="col-md-6 offset-md-6">
                             <mat-input-container color="accent">
-                              <input matInput type="text" placeholder="First Name" [(ngModel)]="student.firstName" #firstName="ngModel" value="Ci" name="firstName">
+                              <input matInput type="text" placeholder="First Name" [(ngModel)]="student.firstName" #firstName="ngModel" value="Ci" name="firstName" required #spy>
                             </mat-input-container>
+                            <div [hidden]="firstName.valid || firstName.pristine"
+                                class="alert alert-danger">
+                                Please Enter First Name
+                            </div>
                         </div>
                     </div>
-      
+
                     <div class="row">
                         <div class="col-md-6 offset-md-6">
                             <mat-input-container color="accent">
-                              <input matInput type="text" placeholder="Last Name" [(ngModel)]="student.lastName" #lastName="ngModel" value="Ci" name="lastName">
+                              <input matInput type="text" placeholder="Last Name" [(ngModel)]="student.lastName" #lastName="ngModel" value="Ci" name="lastName" required #spy>
                             </mat-input-container>
+                            <div [hidden]="lastName.valid || lastName.pristine"
+                                class="alert alert-danger">
+                                Please Enter Last Name
+                        </div>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-6 offset-md-6">
+                            <mat-input-container color="accent">
+                              <input matInput type="text" placeholder="Email" [(ngModel)]="student.email" #email="ngModel" value="Ci" name="email" required #spy>
+                            </mat-input-container>
+                            <div [hidden]="email.valid || email.pristine"
+                                class="alert alert-danger">
+                                Please Enter Email
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 offset-md-6">
+                            <mat-input-container color="accent">
+                              <input matInput type="text" placeholder="Password" [(ngModel)]="student.password" #password="ngModel" value="Ci" name="password" required #spy>
+                            </mat-input-container>
+                            <div [hidden]="password.valid || password.pristine"
+                                class="alert alert-danger">
+                                Password required
+                        </div>
+                        </div>
+                    </div>
+      
                     
                    <div class="row">
                         <div class="col-md-6">
                             <mat-input-container color="accent">
-                                <mat-select placeholder="Company" [(ngModel)]="student.company" #company="ngModel" name="company">
-                                    <mat-option *ngFor="let company of companies" [value]="company.id">{{company.name}}</mat-option>
+                                <mat-select placeholder="Company" [(ngModel)]="student.company" #company="ngModel" name="company" required #spy>
+                                    <mat-option *ngFor="let company of companies" [value]="company.name">{{company.name}}</mat-option>
                                 </mat-select>
                             </mat-input-container>
+                            <div [hidden]="company.valid || company.pristine"
+                                class="alert alert-danger">
+                                Please Select Company
+                        </div>
                         </div>
 
                         <div class="col-md-6">
                             <mat-input-container color="accent">
-                                <mat-select placeholder="Supervisor" [(ngModel)]="student.supervisor" #supervisor="ngModel" name="supervisor">
-                                    <mat-option *ngFor="let supervisor of supervisors" [value]="supervisor.id">{{supervisor.name}}</mat-option>
+                                <mat-select placeholder="Supervisor" [(ngModel)]="student.supervisor" #supervisor="ngModel" name="supervisor" required #spy>
+                                    <mat-option *ngFor="let supervisor of supervisors" [value]="supervisor.name">{{supervisor.name}}</mat-option>
                                 </mat-select>
                             </mat-input-container>
+                            <div [hidden]="supervisor.valid || supervisor.pristine"
+                                class="alert alert-danger">
+                                Please Enter Student Id
+                        </div>
                         </div>
                    </div>
 
                    <div class="row">
                       <div class="col-md-6">
                           <mat-input-container color="accent">
-                              <mat-select placeholder="Academic Year" [(ngModel)]="student.academicYear" #academicYear="ngModel" name="academicYear">
-                                <mat-option *ngFor="let year of years" [value]="year.id">{{year.name}}</mat-option>
-     
+                              <mat-select placeholder="Academic Year" [(ngModel)]="student.academicYear" #academicYear="ngModel" name="academicYear" required #spy>
+                                <mat-option *ngFor="let year of years" [value]="year.name">{{year.name}}</mat-option>
                               </mat-select>
                           </mat-input-container>
+                          <div [hidden]="academicYear.valid || academicYear.pristine"
+                                class="alert alert-danger">
+                                Please Enter Student Id
+                        </div>
                       </div>
                   </div>
+
+                  
 
                     <div class="row action-btn">
                       <!-- Save button -->
