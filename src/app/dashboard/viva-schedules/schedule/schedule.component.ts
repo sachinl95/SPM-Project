@@ -99,6 +99,7 @@ export class ScheduleComponent implements OnInit {
     delete() {
         axios.delete(constants.HOME_URL + 'admin/schedules/' + this.studentId).then(response => {
             alert('The viva schedule for student ' + this.studentId + ' has been deleted')
+            this.router.navigate(['dashboard/admin/viva-schedules'])
         }).catch(error => {
             alert(error.response.data.message)
         })
