@@ -1,3 +1,34 @@
-<p>
-  schedule works!
-</p>
+<mat-card class="card">
+    <mat-icon class="col-sm-4" [routerLink]="['/dashboard/admin/viva-schedules']">arrow_back</mat-icon>
+    <mat-card-title class="col-sm-4">{{actionText}}</mat-card-title>
+    <mat-icon class="col-sm-4" (click)="delete()" *ngIf="studentId !== undefined">delete</mat-icon>
+    <mat-card-content style="padding-bottom: 500px">
+        <div class="col-md-12">
+            <mat-input-container>
+                <input matInput type="text" placeholder="Student ID" [(ngModel)]="scheduleObj.studentId" />
+            </mat-input-container>
+        </div>
+        <div class="col-md-3">
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker1" [(ngModel)]="scheduleObj.dateTime" #endDate="ngModel"
+                    placeholder="Date" name="endDate">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="col-md-3" style="padding-top: 10px;">
+            <label>Time </label>
+            <input style="max-width: 40px;" maxlength="2" type="number" min="0" max="23" [(ngModel)]="hour" />
+            <label> : </label>
+            <input style="max-width: 50px;" maxlength="2" type="number" min="0" max="59" [(ngModel)]="minute" />
+        </div>
+        <div class="col-md-12">
+            <mat-input-container>
+                <input matInput type="text" placeholder="Location" [(ngModel)]="scheduleObj.location" />
+            </mat-input-container>
+        </div>
+        <div class="col-md-12">
+            <button md-raised-button type="button" class="btn btn-rose" (click)="addOrUpdate()">{{actionText}}</button>
+        </div>
+    </mat-card-content>
+</mat-card>
