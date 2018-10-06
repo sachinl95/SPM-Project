@@ -17,15 +17,20 @@ export class CompanyComponent implements OnInit {
   }
 
   onSubmit(form:NgForm){
+
     if(form.valid){
       this.companyService.postCompany(this.company)
       .subscribe(
         (data:any)=>{
           console.log(data);
+          alert(data);
+          form.reset();
         }
       )
-      alert("Company Add Succefully");
+      
+      //console.log(this.company);
     }
+   //console.log(this.company);
   }
 
 
