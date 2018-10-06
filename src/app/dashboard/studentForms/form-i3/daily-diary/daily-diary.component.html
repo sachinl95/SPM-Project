@@ -10,8 +10,11 @@
                 <div class="col-md-7">
                     <mat-input-container color="accent">
                       <!-- <input matInput type="text" [(ngModel)]="Formi3DailyDiary.studentId" #studentId="ngModel" value="Ci" name="studentId"> -->
-                      <input matInput type="text" placeholder="Student ID"[(ngModel)]="dailyDiary.studentId" #studentId="ngModel" value="Ci" name="studentId">
+                      <input matInput type="text" placeholder="Student ID"[(ngModel)]="dailyDiary.studentId" #studentId="ngModel" value="Ci" name="studentId" required #spy>
                     </mat-input-container>
+                    <div [hidden]= "studentId.valid || studentId.pristine"  class ="alert alert-danger">
+                        please Enter Valid Student ID
+                    </div>
                   </div>
               <div class="col-md-7">
                 <mat-input-container color="accent">
@@ -19,6 +22,7 @@
                 </mat-input-container>
               </div>
             </div>
+            
             <h5>Training Period</h5>
             <div class="col-md-6"> 
                 <mat-form-field>
@@ -44,7 +48,7 @@
               </div>
             </div>
             <div class="row action-btn">
-                <button md-raised-button type="submit" class="btn btn-danger">Reset</button>
+                <button md-raised-button type="submit" class="btn btn-danger" (click)="ngOnInit()" >Reset</button>
               <button md-raised-button type="submit" class="btn btn-success" (click)="onSubmit(CreateDailyDiaryForm)">Add</button>
               
             </div>
