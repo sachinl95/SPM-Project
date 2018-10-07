@@ -1,34 +1,39 @@
-<mat-form-field>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-  </mat-form-field>
-  
-  <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
-  <table>
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-  
+<mat-card class="card">
+    <mat-card-title>Monthly Report
+    </mat-card-title>
+    <div style="float: right; position: absolute; top: 15px; right: 100px;">
+      <button md-raised-button type="button" class="btn btn-rose" [routerLink]="['schedule']">Send Monthly Report</button>
+    </div>
+    <h5>Select Training Period</h5>
+            <div class="col-md-6"> 
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker"     placeholder="From" name="startDate" required #spy>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  
+            </div>
+            <div class="col-md-6"> 
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker1"    placeholder="To" name="endDate" required #spy>
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
+                   
+            </div>
+             
+    <table>
+      <tr>
+        <th>Training Party</th>
+        <th>Training Description</th>
+        <th>Start Day(From)</th>
+        <th>End Date(To)</th>
+      </tr>
+      <tr *ngFor="let monthlyReport of report" >
+        <td>{{monthlyReport.trainingParty}}</td>
+        <td>{{monthlyReport.description}}</td>
+        <td>{{monthlyReport.startDate}}</td>
+        <td>{{monthlyReport.endDate}}</td>
+      </tr>
+    </table>
+  </mat-card>
