@@ -19,6 +19,7 @@ export const ROUTES = [
     // { path: 'alert', title: 'Sweet Alert', icon: 'warning', children: null },
     // { path: 'settings', title: 'Settings', icon: 'settings', children: null },
     { path: 'company', title: 'Company', icon: 'domain', children: null },
+    { path: 'assign-student', title: 'Assign', icon: 'domain', children: null },  
 
     { path: 'profile', title: 'profile', icon: 'domain', children: null },
     { path: 'admin/viva-schedules', title: 'Viva Schedules', icon: 'account_box', children: null },

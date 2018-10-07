@@ -53,6 +53,8 @@ import { SupervisorServiceService } from './dashboard/supervisor/supervisor-serv
 import { InternInfoComponent } from './dashboard/studentForms/form-i3/intern-info/intern-info.component';
 import { SendMonthlyReportComponent } from './dashboard/studentForms/form-i3/send-monthly-report/send-monthly-report.component';
 import { FormI1P2Service } from './dashboard/studentForms/form-i1-p2/form-i1-p2.service';
+import { AssignStudentComponent } from './dashboard/assign-student/assign-student.component';
+import {AssignService} from './dashboard/assign-student/assign.service'
 
 @NgModule({
   declarations: [
@@ -87,7 +89,8 @@ import { FormI1P2Service } from './dashboard/studentForms/form-i1-p2/form-i1-p2.
     DailyDiaryComponent,
     FormI3Component,
     InternInfoComponent,
-    SendMonthlyReportComponent
+    SendMonthlyReportComponent,
+    AssignStudentComponent
   ],
   imports: [
     BrowserModule,
@@ -113,7 +116,7 @@ import { FormI1P2Service } from './dashboard/studentForms/form-i1-p2/form-i1-p2.
     MatIconModule
   ],
   providers: [SettingsService,
-    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService, SupervisorServiceService, FormI1P2Service
+    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService, SupervisorServiceService, FormI1P2Service, AssignService
   ],
   bootstrap: [AppComponent]
 })

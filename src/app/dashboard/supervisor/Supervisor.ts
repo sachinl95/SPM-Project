@@ -1,9 +1,9 @@
 
 export class Supervisor {
-  supervisorId: string;
+  nic: string;
   firstname: string;
   lastname: string;
-  nic: string;
-  passsword: string;
+  email: string;
+  password: string;
   confirmPassword:string;
 }

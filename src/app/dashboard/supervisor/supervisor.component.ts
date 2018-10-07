@@ -12,7 +12,7 @@ import { Supervisor } from './Supervisor';
 
 
 export class SupervisorComponent implements OnInit {
-
+  matchError: boolean
   supervisor: Supervisor;
   constructor(private superVisorService:SupervisorServiceService) { }
 
@@ -26,9 +26,14 @@ export class SupervisorComponent implements OnInit {
       .subscribe(
         (data:any)=>{
           console.log(data);
+          alert(data.message);
+          form.reset();
         }
       )
     }
+  
+   console.log(this.supervisor);
   }
+
 
 }

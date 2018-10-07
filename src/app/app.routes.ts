@@ -24,6 +24,11 @@ import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diar
 import { InternInfoComponent } from './dashboard/studentForms/form-i3/intern-info/intern-info.component';
 import { SendMonthlyReportComponent } from './dashboard/studentForms/form-i3/send-monthly-report/send-monthly-report.component';
 import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p2.component';
+import { AssignStudentComponent } from './dashboard/assign-student/assign-student.component'
+
+
+
+
 
 const routes: Routes = [
     { path: '', component: LoginComponent },
@@ -51,6 +56,8 @@ const routes: Routes = [
             { path: 'supervisor', component: SupervisorComponent },
             { path: 'forms/formI3/internInfo', component: InternInfoComponent },
             { path: 'forms/formI3/monthlyReport', component: SendMonthlyReportComponent },
+            
+    {path: 'assign-student', component:AssignStudentComponent},
         ]
     }
 ];

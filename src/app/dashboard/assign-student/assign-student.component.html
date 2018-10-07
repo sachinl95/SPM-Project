@@ -1,0 +1,94 @@
+<div class="container">
+  <app-navbar title="User Profile"></app-navbar>
+  <div class="row" style="margin-top: 30px">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <i class="material-icons">perm_identity</i>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Supervisor Adds student-
+            <small class="category">Enter student details under a supervisor</small>
+          </h4>
+          <form #createAssign="ngForm" novalidate>
+
+            <div class="row">
+              <div class="col-md-4">
+                <mat-input-container color="accent">
+                
+                  <input matInput type="text" placeholder="NIC" name="supervisorName" [(ngModel)]="assign.supervisorName" #supervisorName="ngModel" 
+                  required>
+                </mat-input-container>
+                <div class="alert alert-danger" *ngIf="supervisorName.touched && !supervisorName.valid">
+                    Supervisor name Required
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <mat-input-container color="accent">
+                
+                  <input matInput type="text" placeholder="Student Name" name="studentName" [(ngModel)]="assign.studentName" #studentName="ngModel" 
+                  required>
+                </mat-input-container>
+                <div class="alert alert-danger" *ngIf="studentName.touched && !studentName.valid">
+                    Student Name Required
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <mat-input-container color="accent">
+                
+                  <input matInput type="text" placeholder="Student ID" name="studentID" [(ngModel)]="assign.studentID" #studentID="ngModel" 
+                  required>
+                </mat-input-container>
+                <div class="alert alert-danger" *ngIf="studentID.touched && !studentID.valid">
+                    Student ID Required
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <mat-input-container color="accent">
+                
+                  <input matInput type="text" placeholder="Company name" name="companyName" [(ngModel)]="assign.companyName" #companyName="ngModel" 
+                  required>
+                </mat-input-container>
+                <div class="alert alert-danger" *ngIf="companyName.touched && !companyName.valid">
+                    Company Name Required
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <mat-input-container color="accent">
+                  <p>Date started</p>
+                  <input matInput type="Date" name="dateStarted" [(ngModel)]="assign.dateStarted" #dateStarted="ngModel" 
+                  required>
+                </mat-input-container>
+                <div class="alert alert-danger" *ngIf="dateStarted.touched && !dateStarted.valid">
+                    Date Required
+                </div>
+              </div>
+            </div>
+
+            <div class="row action-btn">
+              <button md-raised-button type="submit" class="btn btn-rose" (click)="assignSubmit(createAssign)">REGISTER</button>
+            </div>
+            
+
+            
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+</div>
