@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {RegisterService} from './register.service'
+import {RegisterService} from './register.service';
+import { CompanyService } from '../../dashboard/company/company.service';
 import { NgForm } from '../../../../node_modules/@angular/forms';
 import {Student} from '../../_models/Student'
+import {Company} from '../../_models/Company';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -10,14 +12,12 @@ import {Student} from '../../_models/Student'
 export class RegisterComponent implements OnInit {
 
   student:Student;
-  constructor(private registerService:RegisterService) { }
+  company:Company;
+  constructor(private registerService:RegisterService , private companyService:CompanyService) { }
 
 
-  companies=[
-    {id:1,name:"MIT" },
-    {id:2,name:"Vertuza"},
-    {id:3,name:"99x"}
-  ]
+  
+  companyName:company[];
 
     years=[
       {id:1,name:"year 1" },
@@ -31,17 +31,25 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.student= new Student;
+
+    this.companyService.getCompany().subscribe(
+      (data:any) => {
+        this.companyName = data.message;
+        console.log(data.message);
+      }
+    )
   }
 
   onSubmit(form:NgForm){
     if(form.valid){
-      // this.registerService.postStudent(this.student)
-      // .subscribe(
-      //   (data:any)=>{
-      //     console.log(data);
-      //   }
-      // )
-      // alert("Student Add Succefully");
+      this.registerService.postStudent(this.student)
+      .subscribe(
+        (data:any)=>{
+          alert(data.message);
+          console.log(data);
+        }
+      )
+      
       console.log(this.student);
       
     }
@@ -50,5 +58,9 @@ export class RegisterComponent implements OnInit {
 
   }
   
+
+}
+
+export class company{
 
 }

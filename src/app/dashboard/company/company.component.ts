@@ -23,13 +23,13 @@ export class CompanyComponent implements OnInit {
       .subscribe(
         (data:any)=>{
           console.log(data);
-          alert(data);
+          alert(data.message);
           form.reset();
         }
       )
       
       //console.log(this.company);
-    }
+    } 
    //console.log(this.company);
   }
 
