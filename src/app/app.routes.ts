@@ -23,6 +23,7 @@ import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.compon
 import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.component';
 import { InternInfoComponent } from './dashboard/studentForms/form-i3/intern-info/intern-info.component';
 import { SendMonthlyReportComponent } from './dashboard/studentForms/form-i3/send-monthly-report/send-monthly-report.component';
+import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p2.component';
 
 const routes: Routes = [
     { path: '', component: LoginComponent },
@@ -43,7 +44,8 @@ const routes: Routes = [
             { path: 'admin/viva-schedules', component: VivaSchedulesComponent },
             { path: 'admin/viva-schedules/schedule/:studentId', component: ScheduleComponent },
             { path: 'admin/viva-schedules/schedule', component: ScheduleComponent },
-            { path: 'forms/formI1P1', component: FormI1P1Component },
+            {path: 'forms/formI1P1', component: FormI1P1Component},
+            {path: 'forms/formI1P2', component: FormI1P2Component},
             { path: 'company', component: CompanyComponent },
             { path: 'forms/formI3/dailyDiary', component: DailyDiaryComponent },
             { path: 'supervisor', component: SupervisorComponent },

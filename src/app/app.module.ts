@@ -52,6 +52,7 @@ import { SupervisorComponent } from './dashboard/supervisor/supervisor.component
 import { SupervisorServiceService } from './dashboard/supervisor/supervisor-service.service';
 import { InternInfoComponent } from './dashboard/studentForms/form-i3/intern-info/intern-info.component';
 import { SendMonthlyReportComponent } from './dashboard/studentForms/form-i3/send-monthly-report/send-monthly-report.component';
+import { FormI1P2Service } from './dashboard/studentForms/form-i1-p2/form-i1-p2.service';
 
 @NgModule({
   declarations: [
@@ -112,7 +113,7 @@ import { SendMonthlyReportComponent } from './dashboard/studentForms/form-i3/sen
     MatIconModule
   ],
   providers: [SettingsService,
-    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService, SupervisorServiceService
+    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService, SupervisorServiceService, FormI1P2Service
   ],
   bootstrap: [AppComponent]
 })
