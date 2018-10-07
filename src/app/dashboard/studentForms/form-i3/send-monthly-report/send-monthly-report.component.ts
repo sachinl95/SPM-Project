@@ -1,23 +1,26 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
-import { Http, Response } from '@angular/http'
+import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 import { Router } from '@angular/router';
 
-@Component({
-  selector: 'app-viva-schedules',
-  templateUrl: './viva-schedules.component.html',
-  styleUrls: ['./viva-schedules.component.css']
-})
-export class VivaSchedulesComponent {
 
+
+@Component({
+  selector: 'app-send-monthly-report',
+  templateUrl: './send-monthly-report.component.html',
+  styleUrls: ['./send-monthly-report.component.css']
+  
+})
+
+
+export class SendMonthlyReportComponent implements OnInit {
   constructor(private http: Http, private router: Router) { }
 
-  students = []
+  report = []
 
   ngOnInit() {
-    this.http.get('http://localhost:3000/admin/schedules').map(res => res.json()).subscribe(
+    this.http.get('http://localhost:3000/student/dailydiary').map(res => res.json()).subscribe(
       success => {
-        this.students = success
+        this.report = success.data
       },
       error => {
         alert(error)
@@ -43,4 +46,10 @@ export class VivaSchedulesComponent {
     window.location.href = 'http://' + this.getServerURL() + '/dashboard/admin/viva-schedules/schedule/' + studentId
   }
 
-}
+  }
+
+
+
+
+
+

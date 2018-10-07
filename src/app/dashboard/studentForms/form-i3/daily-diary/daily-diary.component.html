@@ -10,41 +10,57 @@
                 <div class="col-md-7">
                     <mat-input-container color="accent">
                       <!-- <input matInput type="text" [(ngModel)]="Formi3DailyDiary.studentId" #studentId="ngModel" value="Ci" name="studentId"> -->
-                      <input matInput type="text" placeholder="Student ID"[(ngModel)]="dailyDiary.studentId" #studentId="ngModel" value="Ci" name="studentId">
+                      <input matInput type="text" placeholder="Student ID"[(ngModel)]="dailyDiary.studentId" #studentId="ngModel" value="Ci" name="studentId" required #spy>
                     </mat-input-container>
+                    <div [hidden]= "studentId.valid || studentId.pristine"  class ="alert alert-danger">
+                        please Enter Valid Student ID
+                    </div>
                   </div>
               <div class="col-md-7">
                 <mat-input-container color="accent">
-                  <input matInput type="text" placeholder="Training Party" [(ngModel)]="dailyDiary.trainingParty" #trainingParty="ngModel" value="Ci" name="trainingParty">
+                  <input matInput type="text" placeholder="Training Party" [(ngModel)]="dailyDiary.trainingParty" #trainingParty="ngModel" value="Ci" name="trainingParty" required #spy>
                 </mat-input-container>
+                <div [hidden]= "trainingParty.valid || trainingParty.pristine"  class ="alert alert-danger">
+                    please Enter Training Party
+                </div>
               </div>
             </div>
+            
             <h5>Training Period</h5>
             <div class="col-md-6"> 
                 <mat-form-field>
-                    <input matInput [matDatepicker]="picker"  [(ngModel)]="dailyDiary.startDate" #startDate="ngModel" placeholder="From" name="startDate">
+                    <input matInput [matDatepicker]="picker"  [(ngModel)]="dailyDiary.startDate" #startDate="ngModel" placeholder="From" name="startDate" required #spy>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                   </mat-form-field>
+                  <div [hidden]= "startDate.valid || startDate.pristine"  class ="alert alert-danger">
+                      please Enter Start Date
+                  </div>
             </div>
             <div class="col-md-6"> 
                 <mat-form-field>
-                    <input matInput [matDatepicker]="picker1"  [(ngModel)]="dailyDiary.endDate" #endDate="ngModel" placeholder="To" name="endDate">
+                    <input matInput [matDatepicker]="picker1"  [(ngModel)]="dailyDiary.endDate" #endDate="ngModel" placeholder="To" name="endDate" required #spy>
                     <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                     <mat-datepicker #picker1></mat-datepicker>
                   </mat-form-field>
+                  <div [hidden]= "startDate.valid || startDate.pristine"  class ="alert alert-danger">
+                      please Enter End Date
+                  </div>
             </div>
              
             <div class="row">
               <div class="col-md-8">
                 <label class="textarea-label">Description</label>
                 <mat-input-container color="accent">
-                  <textarea matInput  [(ngModel)]="dailyDiary.description" #description="ngModel"  name="description" placeholder="Enter Description about your daily Training"></textarea>
+                  <textarea matInput  [(ngModel)]="dailyDiary.description" #description="ngModel"  name="description" placeholder="Enter Description about your daily Training" required #spy></textarea>
                 </mat-input-container>
+                <div [hidden]= "description.valid || description.pristine"  class ="alert alert-danger">
+                    please Enter Description Of Training
+                </div>
               </div>
             </div>
             <div class="row action-btn">
-                <button md-raised-button type="submit" class="btn btn-danger">Reset</button>
+                <button md-raised-button type="submit" class="btn btn-danger" (click)="ngOnInit()" >Reset</button>
               <button md-raised-button type="submit" class="btn btn-success" (click)="onSubmit(CreateDailyDiaryForm)">Add</button>
               
             </div>

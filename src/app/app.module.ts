@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatNativeDateModule,MatSelectModule,MatDatepickerModule,MatFormFieldModule,MatTableModule } from '@angular/material';
+import { RouterModule } from '@angular/router';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule,MatSidenavModule,MatNativeDateModule,MatSelectModule,MatDatepickerModule,MatFormFieldModule,MatTableModule, MatIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -12,6 +13,7 @@ import { HomeComponent } from './dashboard/home/home.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import 'hammerjs';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+
 import { FigurecardComponent } from './shared/figurecard/figurecard.component';
 import { ImagecardComponent } from './shared/imagecard/imagecard.component';
 import { TableComponent } from './dashboard/table/table.component';
@@ -46,6 +48,13 @@ import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p
 import { CompanyService } from './dashboard/company/company.service';
 import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.component'
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
+import { SupervisorComponent } from './dashboard/supervisor/supervisor.component'
+import { SupervisorServiceService } from './dashboard/supervisor/supervisor-service.service';
+import { InternInfoComponent } from './dashboard/studentForms/form-i3/intern-info/intern-info.component';
+import { SendMonthlyReportComponent } from './dashboard/studentForms/form-i3/send-monthly-report/send-monthly-report.component';
+import { FormI1P2Service } from './dashboard/studentForms/form-i1-p2/form-i1-p2.service';
+import { AssignStudentComponent } from './dashboard/assign-student/assign-student.component';
+import {AssignService} from './dashboard/assign-student/assign.service'
 
 @NgModule({
   declarations: [
@@ -69,6 +78,7 @@ import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.compon
     PriceTableComponent,
     PanelsComponent,
     WizardComponent,
+    SupervisorComponent,
     StudentComponent,
     CompanyComponent,
     FormI1P1Component,
@@ -77,7 +87,10 @@ import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.compon
     ScheduleComponent,
     FormI1P2Component,
     DailyDiaryComponent,
-    FormI3Component
+    FormI3Component,
+    InternInfoComponent,
+    SendMonthlyReportComponent,
+    AssignStudentComponent
   ],
   imports: [
     BrowserModule,
@@ -98,10 +111,12 @@ import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.compon
     MatNativeDateModule,
     MatListModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    RouterModule,
+    MatIconModule
   ],
   providers: [SettingsService,
-    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService
+    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService, SupervisorServiceService, FormI1P2Service, AssignService
   ],
   bootstrap: [AppComponent]
 })

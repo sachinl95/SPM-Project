@@ -1,8 +1,7 @@
+<app-navbar></app-navbar>
 <div class="container">
     <div class="row">
-      <!--col-md-2-->
         <div class=" col-md-2"></div>
-      <!-- form content start -->  
         <div class=" col-md-8">
             <div class="card">
                 <div class="card-content">
@@ -14,55 +13,99 @@
                     <div class="row">
                       <div class="col-md-6 offset-md-6">
                         <mat-input-container color="accent">
-                          <input matInput type="text" placeholder="Student ID" [(ngModel)]="student.studentId" #studentId="ngModel" value="Ci" name="studentId">
+                          <input matInput type="text" placeholder="Student ID" [(ngModel)]="student.studentId" #studentId="ngModel" value="Ci" name="studentId" required>
                         </mat-input-container>
+                        <div class="alert alert-danger" *ngIf="studentId.touched && !studentId.valid">
+                            Student Register Number Required
+                        </div>
                       </div>
                     </div>
       
                     <div class="row">
                         <div class="col-md-6 offset-md-6">
                             <mat-input-container color="accent">
-                              <input matInput type="text" placeholder="First Name" [(ngModel)]="student.firstName" #firstName="ngModel" value="Ci" name="firstName">
+                              <input matInput type="text" placeholder="First Name" [(ngModel)]="student.firstName" #firstName="ngModel" value="Ci" name="firstName" 
+                              pattern="[a-zA-Z ]*" required>
                             </mat-input-container>
+                            <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+                                <div *ngIf="firstName.errors.required">First Name is required</div>
+                                <div *ngIf="firstName.errors.pattern">Only Allowed Alphanumeric Characters</div>
+                            </div>
                         </div>
                     </div>
-      
+
                     <div class="row">
                         <div class="col-md-6 offset-md-6">
                             <mat-input-container color="accent">
-                              <input matInput type="text" placeholder="Last Name" [(ngModel)]="student.lastName" #lastName="ngModel" value="Ci" name="lastName">
+                              <input matInput type="text" placeholder="Last Name" [(ngModel)]="student.lastName" #lastName="ngModel" value="Ci" name="lastName" 
+                              pattern="[a-zA-Z ]*" required>
                             </mat-input-container>
+                            <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">
+                                <div *ngIf="lastName.errors.required">Last Name Required</div>
+                                <div *ngIf="lastName.errors.pattern">Only Allowed Alphanumeric Characters</div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-6 offset-md-6">
+                            <mat-input-container color="accent">
+                              <input matInput type="text" placeholder="Email" [(ngModel)]="student.email" #email="ngModel" value="Ci" name="email" 
+                              required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                            </mat-input-container>
+                            <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                                <div *ngIf="email.errors.required">Email Required</div>
+                                <div *ngIf="email.errors.pattern">Please Enter Valid Email</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 offset-md-6">
+                            <mat-input-container color="accent">
+                              <input matInput type="text" placeholder="Password" [(ngModel)]="student.password" #password="ngModel" value="Ci" name="password" 
+                              required minlength="6" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}">
+                            </mat-input-container>
+                            <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+                                <div *ngIf="password.errors.required">Password Required</div>
+                                <div *ngIf="password.errors.pattern">Password Should Contain 8 Characters, One Lower Case, One Upper Case, And One Special Character</div>
+                            </div>
+                        </div>
+                    </div>
+      
                     
                    <div class="row">
                         <div class="col-md-6">
                             <mat-input-container color="accent">
-                                <mat-select placeholder="Company" [(ngModel)]="student.company" #company="ngModel" name="company">
-                                    <mat-option *ngFor="let company of companies" [value]="company.id">{{company.name}}</mat-option>
+                                <mat-select placeholder="Company" [(ngModel)]="student.company" #company="ngModel" name="company" required>
+                                    <mat-option *ngFor="let company of companyName" [value]="company.companyName">{{company.companyName}}</mat-option>
                                 </mat-select>
                             </mat-input-container>
+                            <div class="alert alert-danger" *ngIf="company.touched && !company.valid">Please Select Company</div>
                         </div>
 
                         <div class="col-md-6">
                             <mat-input-container color="accent">
-                                <mat-select placeholder="Supervisor" [(ngModel)]="student.supervisor" #supervisor="ngModel" name="supervisor">
-                                    <mat-option *ngFor="let supervisor of supervisors" [value]="supervisor.id">{{supervisor.name}}</mat-option>
+                                <mat-select placeholder="Supervisor" [(ngModel)]="student.supervisor" #supervisor="ngModel" name="supervisor" required>
+                                    <mat-option *ngFor="let supervisor of supervisors" [value]="supervisor.name">{{supervisor.name}}</mat-option>
                                 </mat-select>
                             </mat-input-container>
+                            <div class="alert alert-danger" *ngIf="supervisor.touched && !supervisor.valid">Please Select Supervisor</div>
                         </div>
                    </div>
 
                    <div class="row">
                       <div class="col-md-6">
                           <mat-input-container color="accent">
-                              <mat-select placeholder="Academic Year" [(ngModel)]="student.academicYear" #academicYear="ngModel" name="academicYear">
-                                <mat-option *ngFor="let year of years" [value]="year.id">{{year.name}}</mat-option>
-     
+                              <mat-select placeholder="Academic Year" [(ngModel)]="student.academicYear" #academicYear="ngModel" name="academicYear" required>
+                                <mat-option *ngFor="let year of years" [value]="year.name">{{year.name}}</mat-option>
                               </mat-select>
                           </mat-input-container>
+                          <div class="alert alert-danger" *ngIf="academicYear.touched && !academicYear.valid">Please Select Academic Year</div>
                       </div>
                   </div>
+
+                  
 
                     <div class="row action-btn">
                       <!-- Save button -->

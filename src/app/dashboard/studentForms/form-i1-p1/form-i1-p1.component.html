@@ -6,60 +6,88 @@
       <div class="row">
         <mat-form-field class="fullLength">
           <input matInput placeholder="Student ID No" class="fullLength" name="studentId" [(ngModel)]="formI1P1.studentId" #studentId="ngModel"
-          id="studentId">
+          id="studentId" required>
+          <mat-error *ngIf="validationFormControl.hasError('required')">
+            Student ID is <strong>required</strong>
+           </mat-error>
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field class="fullLength">
           <input matInput placeholder="Student's Name" class="fullLength" name="name" [(ngModel)]="formI1P1.name" #name="ngModel"
-          id="name">
+          id="name" required>
+          <mat-error *ngIf="validationFormControl.hasError('required')">
+            Student Name is <strong>required</strong>
+            </mat-error>
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field class="fullLength">
           <input matInput placeholder="Address" class="fullLength" name="address" [(ngModel)]="formI1P1.address" #address="ngModel"
-          id="address">
+          id="address" required>
+          <mat-error *ngIf="validationFormControl.hasError('required')">
+            Address is <strong>required</strong>
+           </mat-error>
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field class="fullLength">
-          <input type="number" matInput placeholder="Home Phone" class="fullLength" name="homePhone" [(ngModel)]="formI1P1.homePhone" #homePhone="ngModel"
-          id="homePhone">
+          <input (keypress)="keyPress($event)" minlength=10 maxlength=10 matInput placeholder="Home Phone" class="fullLength" name="homePhone" [(ngModel)]="formI1P1.homePhone" #homePhone="ngModel"
+          id="homePhone" required>
+          <mat-hint>maximum:10 numbers</mat-hint>
+          <mat-error *ngIf="validationFormControl.hasError('required')">
+            Home Phone is <strong>required(10 numbers required)</strong>
+           </mat-error>
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field class="fullLength">
-          <input type="number" matInput placeholder="Mobile Phone" class="fullLength" name="mobilePhone" [(ngModel)]="formI1P1.mobilePhone" #mobilePhone="ngModel"
-          id="mobilePhone">
+          <input (keypress)="keyPress($event)" minlength=10 maxlength=10 matInput placeholder="Mobile Phone" class="fullLength" name="mobilePhone" [(ngModel)]="formI1P1.mobilePhone" #mobilePhone="ngModel"
+          id="mobilePhone" required>
+          <mat-hint>maximum:10 numbers</mat-hint>
+          <mat-error *ngIf="validationFormControl.hasError('required')">
+            Mobile Phone is <strong>required(10 numbers required)</strong>
+           </mat-error>
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field class="fullLength" class="fullLength" >
-          <input type="email" matInput placeholder="E-mail Addresses" class="fullLength" name="emails" [(ngModel)]="formI1P1.emails" #emails="ngModel"
-          id="emails">
-          <mat-hint>*Use comma(,) to seperate multiple email addresses</mat-hint>
+          <input type="email" matInput placeholder="E-mail Address" class="fullLength" name="emails" [(ngModel)]="formI1P1.emails" #emails="ngModel"
+          id="emails" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+          <mat-error *ngIf="validationFormControl.hasError('required')||Email.errors.pattern">
+           Please Enter aa valid email
+           </mat-error>
         </mat-form-field>
       </div>
       <div class="row" style="padding: 1%">
         <mat-form-field class="dropDowns">
           <mat-select placeholder="Semester" name="semester" [(ngModel)]="formI1P1.semester" #semester="ngModel"
-          id="semester">
+          id="semester" required>
           <mat-option *ngFor="let semester of semesters" [value]="semester.id">
             {{semester.sem}}
           </mat-option>
           </mat-select>
+          <mat-error *ngIf="validationFormControl.hasError('required')">
+            Please select the semester
+           </mat-error>
         </mat-form-field>
         <mat-form-field class="dropDowns">
           <mat-select placeholder="Year" name="year" [(ngModel)]="formI1P1.year" #year="ngModel"
-          id="year">
+          id="year" required>
           <mat-option *ngFor="let year of years" [value]="year.id">
             {{year.val}}
           </mat-option>
           </mat-select>
+          <mat-error *ngIf="validationFormControl.hasError('required')">
+            Please select the year
+           </mat-error>
         </mat-form-field>
         <mat-form-field class="dropDowns">
           <input type="number" max="4" min="0" matInput placeholder="CGPA" name="cgpa" [(ngModel)]="formI1P1.cgpa" #cgpa="ngModel"
-          id="cgpa">
+          id="cgpa" required>
+          <mat-error *ngIf="validationFormControl.hasError('required')">
+            CGPA is <strong>required</strong>
+           </mat-error>
         </mat-form-field>
       </div>
       <button mat-raised-button class="btn btn-primary btn-round" type="submit" (click)="onSubmit(CreateFormI1P1)">Submit</button>

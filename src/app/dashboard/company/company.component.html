@@ -6,36 +6,66 @@
     <div class="row register-panel">
       <div class="col-md-10 col-md-offset-1">
         <div class="card">
-          <h2>Register</h2>
+          <h2>Register Company</h2>
           <div class="row">
-            <div class="col-md-5">
-              <div class="form-part">
-                <div class="row">
-                  <i class="material-icons">credit_card</i>
-                  <mat-input-container color="accent">
-                    <input type="text" matInput placeholder="studentId" name="studentId" [(ngModel)]="company.companyName" #companyName="ngModel"
-                      id="companyName">
-                  </mat-input-container>
-                </div>
-                <div class="row">
-                  <i class="material-icons">face</i>
-                  <mat-input-container color="accent">
-                    <input type="text" matInput placeholder="Name" name="name" [(ngModel)]="company.spervisorName" #spervisorName="ngModel" id="spervisorName">
-                  </mat-input-container>
-                </div>
-      
-                <div class="row">
-                  <i class="material-icons">face</i>
-                  <mat-input-container color="accent">
-                    <input type="text" matInput placeholder="Name" name="name" [(ngModel)]="company.companyContactNum" #companyContactNum="ngModel" id="companyContactNum">
-                  </mat-input-container>
-                </div>
-                <form #CreateStudentForm="ngForm" novalidate>
-                  <div class="row" style="display: flex; justify-content: center">
-                    <button mat-raised-button class="btn btn-primary btn-round" type="submit" (click)="onSubmit(CreateStudentForm)">Register</button>
-                  </div>
-                </form>
-              </div>
+            <div class="col-md-6">
+              <form #createCompany="ngForm" novalidate>
+                  <!--div id="registerForm"-->
+
+                      <div class="row">
+                          
+                          <mat-input-container color="accent">
+                            <input type="text" matInput placeholder="Company Name" name="companyName" [(ngModel)]="company.companyName" #companyName="ngModel"
+                              id="companyName" required>
+                          </mat-input-container>
+                          <div class="alert alert-danger" *ngIf="companyName.touched && !companyName.valid">Company Name Required.</div>
+                      </div>
+
+                      <!-- <div class="row">
+                          
+                          <mat-input-container color="accent">
+                            <input type="text" matInput placeholder="Supervisor Name" name="supervisorName" [(ngModel)]="company.supervisorName" #supervisorName="ngModel"
+                              id="supervisorName" required>
+                          </mat-input-container>
+                          <div class="alert alert-danger" *ngIf="supervisorName.touched && !supervisorName.valid"> Supervisor Name Required.</div>
+                      </div> -->
+
+                      <div class="row">
+                          
+                          <mat-input-container color="accent">
+                              
+                            <input type="text" matInput placeholder="Contact Number" name="companyContact" [(ngModel)]="company.companyContact" #companyContact="ngModel"
+                              id="contactNum"  minlength="10" maxlength="10" required>
+                          </mat-input-container>
+                          <div class="alert alert-danger" *ngIf="companyContact.touched && !companyContact.valid">
+                            <div *ngIf="companyContact.errors.required">Contact Number Required.</div>
+                            <div *ngIf="companyContact.errors.minlength">Contact Number length is 10</div>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          
+                          <mat-input-container color="accent">
+                            <input type="text" matInput placeholder="Address" name="address" [(ngModel)]="company.address" #address="ngModel"
+                              id="address" required>
+                          </mat-input-container>
+                          <div class="alert alert-danger" *ngIf="address.touched && !address.valid">Address Required.</div>
+                      </div>
+
+                      <div class="row">
+                          
+                          <mat-input-container color="accent">
+                            <input type="text" matInput placeholder="Email" name="email" [(ngModel)]="company.email" #email="ngModel"
+                              id="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                          </mat-input-container>
+                          <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                            <div *ngIf="email.errors.required">Email Required.</div>
+                            <div *ngIf="email.errors.pattern">Please Enter Valied Email.</div>
+                          </div>
+                      </div>
+                    <!--/div-->
+                    <button class="btn btn-rose" type="submit" (click)="onSubmit(createCompany)">Submit Report</button>
+              </form>
             </div>
           </div>
         </div>

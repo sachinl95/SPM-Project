@@ -1,0 +1,39 @@
+<mat-card class="card">
+    <mat-card-title>Monthly Report
+    </mat-card-title>
+    <div style="float: right; position: absolute; top: 15px; right: 100px;">
+      <button md-raised-button type="button" class="btn btn-rose" [routerLink]="['schedule']">Send Monthly Report</button>
+    </div>
+    <h5>Select Training Period</h5>
+            <div class="col-md-6"> 
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker"     placeholder="From" name="startDate" required #spy>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  
+            </div>
+            <div class="col-md-6"> 
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker1"    placeholder="To" name="endDate" required #spy>
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
+                   
+            </div>
+             
+    <table>
+      <tr>
+        <th>Training Party</th>
+        <th>Training Description</th>
+        <th>Start Day(From)</th>
+        <th>End Date(To)</th>
+      </tr>
+      <tr *ngFor="let monthlyReport of report" >
+        <td>{{monthlyReport.trainingParty}}</td>
+        <td>{{monthlyReport.description}}</td>
+        <td>{{monthlyReport.startDate}}</td>
+        <td>{{monthlyReport.endDate}}</td>
+      </tr>
+    </table>
+  </mat-card>

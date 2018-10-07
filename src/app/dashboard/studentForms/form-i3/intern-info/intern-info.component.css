@@ -4,15 +4,15 @@
     z-index: 1;
   }
   
+  
   .register-panel{
     margin-top: 25px;
   }
   
   .card{
-    margin: 4% 10%;
-    width: 75%;
-    padding: 1% 20% 25% 5%;
-    height: 100%;
+    padding: 20px 0 20px 50px;
+    margin: 8% 10%;
+    width: 80%;
   }
   
   .card h2{
@@ -63,8 +63,8 @@
     margin-top: 17px;
   }
   
-  .form-part .row .mat-input-container{
-    width: 100%;
+ mat-form-field{
+    width: 80%;
   }
   
   .form-part .row i{
@@ -74,25 +74,16 @@
     color: #555;
   }
   
-  .form-part .socials{
-    margin-top: 40px;
-    margin-bottom: 25px;
-  }
-  
   .form-part .row button{
     margin-top: 15px;
   }
-
-  .fullLength{
-    width: 100%
+  .example-container {
+    display: flex;
+    flex-direction: column;
   }
-
-  .dropDowns{
-   padding:10px 10px 10px 10px;
+  
+  .example-container > * {
+    width: 100%;
   }
-  mat-form-field{
-    padding: 5px;
-  }
-  button{
-    margin-left: 48%;
-  }
+  
+   
