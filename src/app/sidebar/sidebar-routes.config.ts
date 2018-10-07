@@ -1,6 +1,6 @@
 export const ROUTES = [
     // { path: '/dashboard', title: 'Dashboard', icon: 'dashboard', children: null },
-    { path: 'student', title: 'student', icon: 'person', children: null },
+    // { path: 'student', title: 'student', icon: 'person', children: null },
     // { path: 'supervisor', title: 'supervisor', icon: 'supervisor_account', children: null },
     {path: 'forms/formI1P1', title: 'Form I-1', icon: 'apps', children: null }, 
     
