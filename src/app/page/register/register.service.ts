@@ -9,4 +9,6 @@ export class RegisterService {
   postStudent(student){
     return this.http.post(constants.HOME_URL+"student",student);
   }
+
+
 }

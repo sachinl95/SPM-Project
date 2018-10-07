@@ -9,4 +9,8 @@ export class CompanyService {
   postCompany(company){
       return this.http.post(constants.HOME_URL+"company",company)
   }
+
+  getCompany(){
+    return this.http.get(constants.HOME_URL+"company");
+  }
 }
