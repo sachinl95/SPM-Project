@@ -107,3 +107,10 @@
     padding-left: 15px;
   }
   
+.ng-valid[required], .ng-valid.required  {
+ 
+}
+
+.ng-invalid:not(form)  {
+  
+}
