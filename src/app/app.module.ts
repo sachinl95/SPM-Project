@@ -46,6 +46,7 @@ import { FormI1P2Component } from './dashboard/studentForms/form-i1-p2/form-i1-p
 import { CompanyService } from './dashboard/company/company.service';
 import { DailyDiaryComponent } from './dashboard/studentForms/form-i3/daily-diary/daily-diary.component'
 import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.component';
+import { FormI1P2Service } from './dashboard/studentForms/form-i1-p2/form-i1-p2.service';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,7 @@ import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.compon
     ScheduleComponent,
     FormI1P2Component,
     DailyDiaryComponent,
-    FormI3Component
+    FormI3Component,
   ],
   imports: [
     BrowserModule,
@@ -101,7 +102,7 @@ import { FormI3Component } from './dashboard/studentForms/form-i3/form-i3.compon
     MatTableModule
   ],
   providers: [SettingsService,
-    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService
+    RegisterService,CompanyService, FormI1P1Service,DailyDiaryService,FormI1P2Service,
   ],
   bootstrap: [AppComponent]
 })

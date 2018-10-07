@@ -2,13 +2,10 @@ export class FormI1P2{
     employerName:string;
     employerAddress:string;
     superVisorName:string;
+    superVisorPhone:string;
     superVisorTitle:string;
-    startDate:string;
+    superVisorEmail:String;
+    startDate:String;
     endDate:string;
-    vemployerName:string;
     NoOfHours:string;
-    tasks:string;
-    learnings:string;
-    externalSupervisorName:string;
-    date:string;
 }

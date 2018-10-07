@@ -34,6 +34,7 @@ export class FormI1P1Component implements OnInit {
       .subscribe(
         (data:any)=>{
           console.log(data);
+          alert("Form Submitted Successfully");
         }
       )
     }
